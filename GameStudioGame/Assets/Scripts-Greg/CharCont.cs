@@ -6,7 +6,14 @@ using UnityEngine.Events;
 public class CharCont : MonoBehaviour
 {
     [SerializeField] public float jumpForce = 400f;
-    [Range(0, 1)] [SerializeField] public float dashSpeed = 0.36f;
+    [SerializeField] public float dashSpeed = 15f;
+    //[SerializeField] public float dashLength = 0.3f;
+    //[SerializeField] private float dashBufferLength = 0.1f;
+    //private float dashBufferCounter;
+    //private bool isDashing;
+    //private bool hasDashed;
+    //private bool canDash => dashBufferCounter > 0f && !hasDashed; 
+
     [Range(0, 0.3f)] [SerializeField] public float smoothMove = 0.05f;
     [SerializeField] private bool airControl = false;
     [SerializeField] private LayerMask isGround;
@@ -16,7 +23,7 @@ public class CharCont : MonoBehaviour
     private float groundedRadius = 0.2f;
     public bool isGrounded;
     private Rigidbody2D rb2D;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private Vector3 vectorVelocity = Vector3.zero;
 
     [Header("Events")]
