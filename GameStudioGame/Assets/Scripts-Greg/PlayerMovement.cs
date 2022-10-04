@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharCont controller;
     public Rigidbody2D rb2D;
+    public Animator animator; 
 
     public float runSpeed = 40f;
 
@@ -31,27 +32,33 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
-        verticalMove = Input.GetAxisRaw(verticalAxis); 
+        verticalMove = Input.GetAxisRaw(verticalAxis);
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); 
 
         if (Input.GetButtonDown("Jump") && (controller.isGrounded = true))
         {
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
+                animator.SetBool("isJumping", true); 
             }
-            else if (!Input.GetButtonDown("Jump"))
+            else if (!Input.GetButtonDown("Jump") && controller.isGrounded)
             {
-                jump = false; 
+                jump = false;
+                animator.SetBool("isJumping", false); 
             }
         }
 
         if (Input.GetButtonDown("Dash"))
         {
-            dashBufferCounter = dashBufferLength; 
+            dashBufferCounter = dashBufferLength;
+            animator.SetBool("isDashing", true); 
         }
         else
         {
-            dashBufferCounter -= Time.deltaTime; 
+            dashBufferCounter -= Time.deltaTime;
+            animator.SetBool("isDashing", false); 
         }
     }
 
