@@ -34,20 +34,31 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
         verticalMove = Input.GetAxisRaw(verticalAxis);
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); 
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump") && (controller.isGrounded = true))
+        /*if (Input.GetButtonDown("Jump") && (controller.isGrounded == true))
         {
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
-                animator.SetBool("isJumping", true); 
+                animator.SetBool("isJumping", true);
             }
-            else if (!Input.GetButtonDown("Jump") && controller.isGrounded)
+            else
             {
                 jump = false;
-                animator.SetBool("isJumping", false); 
+                animator.SetBool("isJumping", false);
             }
+        }*/
+
+        if (Input.GetButtonDown("Jump") && (controller.isGrounded = true)) 
+        {
+            jump = true;
+            animator.SetBool("isJumping", true); 
+        }
+        else if (controller.isGrounded == false)
+        {
+            jump = false;
+            animator.SetBool("isJumping", false); 
         }
 
         if (Input.GetButtonDown("Dash"))
