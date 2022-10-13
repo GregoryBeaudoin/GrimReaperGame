@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonEnemyController : Enemy, IDamageable
+public class CommonEnemyControllerChris : Enemy, IDamageable
 {
 	public int Health {get; set; }
     public float speed;
