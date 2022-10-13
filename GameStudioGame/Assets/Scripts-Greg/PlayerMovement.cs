@@ -61,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false); 
         }
 
+		if (Input.GetButtonDown("MainAttack"))
+			animator.SetBool("isAttacking", true);
+		else
+			animator.SetBool("isAttacking", false);
+
         if (Input.GetButtonDown("Dash"))
         {
             dashBufferCounter = dashBufferLength;
