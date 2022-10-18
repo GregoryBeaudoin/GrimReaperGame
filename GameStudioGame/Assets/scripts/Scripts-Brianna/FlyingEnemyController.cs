@@ -2,13 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemyController : MonoBehaviour
+public class FlyingEnemyController : Enemy, IDamageable
 {
+	public int Health {get; set; }
     public float speed;
     public float lineOfSight;
     public float shootingRange;
     public float firingRate = 1f;
     private float fireTime;
+
+	public void Damage()
+	{
+		Health++;
+		
+		if (Health > 3){
+			Debug.Log("Dead");
+			Destroy(gameObject);
+		}
+	}
 
     private Transform player;
     public GameObject bullet;

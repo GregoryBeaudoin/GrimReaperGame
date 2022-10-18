@@ -11,6 +11,7 @@ public class CommonEnemyControllerChris : Enemy, IDamageable
 	
 	public void Damage()
 	{
+		Debug.Log(Health);
 		Health++;
 		
 		if (Health > 5){
