@@ -6,9 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharCont controller;
     public Rigidbody2D rb2D;
-    public Animator animator; 
+    public Animator animator;
+    public GameObject projectile; 
 
     public float runSpeed = 40f;
+    public float launchVelocity = 700f; 
 
     float horizontalMove = 0f;
     float verticalMove = 0f; 
@@ -75,6 +77,18 @@ public class PlayerMovement : MonoBehaviour
         {
             dashBufferCounter -= Time.deltaTime;
             animator.SetBool("isDashing", false); 
+        }
+
+        if (Input.GetButtonDown("Cast"))
+        {
+            animator.SetBool("isCasting", true);
+            GameObject soul = Instantiate(projectile, transform.position, transform.rotation);
+            soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
+            Destroy(soul, 3.0f); 
+        }
+        else
+        {
+            animator.SetBool("isCasting", false); 
         }
     }
 
