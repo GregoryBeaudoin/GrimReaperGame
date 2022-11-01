@@ -81,10 +81,25 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Cast"))
         {
-            animator.SetBool("isCasting", true);
-            GameObject soul = Instantiate(projectile, transform.position, transform.rotation);
-            soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
-            Destroy(soul, 3.0f); 
+            if (controller.isFacingRight)
+            {
+                animator.SetBool("isCasting", true);
+                GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
+                //soul.transform.right = transform.right.normalized;
+                //soul.GetComponent<Rigidbody2D>().velocity = transform.right * launchVelocity; 
+                soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
+                Destroy(soul, 3.0f);
+            }
+            else
+            {
+                animator.SetBool("isCasting", true);
+                GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
+                soul.GetComponent<SpriteRenderer>().flipX = false; 
+                //soul.transform.right = transform.right.normalized;
+                //soul.GetComponent<Rigidbody2D>().velocity = transform.right * launchVelocity; 
+                soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
+                Destroy(soul, 3.0f);
+            }
         }
         else
         {
