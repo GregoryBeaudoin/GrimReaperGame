@@ -38,20 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        /*if (Input.GetButtonDown("Jump") && (controller.isGrounded == true))
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                jump = true;
-                animator.SetBool("isJumping", true);
-            }
-            else
-            {
-                jump = false;
-                animator.SetBool("isJumping", false);
-            }
-        }*/
-
+        //Jump
         if (Input.GetButtonDown("Jump") && (controller.isGrounded = true)) 
         {
             jump = true;
@@ -63,11 +50,18 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false); 
         }
 
-		if (Input.GetButtonDown("MainAttack"))
-			animator.SetBool("isAttacking", true);
-		else
-			animator.SetBool("isAttacking", false);
 
+        //Attack
+		if (Input.GetButtonDown("MainAttack"))
+        {
+            animator.SetBool("isAttacking", true);
+        }
+		else
+        {
+            animator.SetBool("isAttacking", false);
+        }	
+			
+        //Dash
         if (Input.GetButtonDown("Dash"))
         {
             dashBufferCounter = dashBufferLength;
@@ -79,26 +73,25 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isDashing", false); 
         }
 
+        //Cast
         if (Input.GetButtonDown("Cast"))
         {
             if (controller.isFacingRight)
             {
                 animator.SetBool("isCasting", true);
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
-                //soul.transform.right = transform.right.normalized;
-                //soul.GetComponent<Rigidbody2D>().velocity = transform.right * launchVelocity; 
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
-                Destroy(soul, 3.0f);
+                animator.SetBool("isDestroyed", true); 
+                Destroy(soul, 1.0f);
             }
             else
             {
                 animator.SetBool("isCasting", true);
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<SpriteRenderer>().flipX = false; 
-                //soul.transform.right = transform.right.normalized;
-                //soul.GetComponent<Rigidbody2D>().velocity = transform.right * launchVelocity; 
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
-                Destroy(soul, 3.0f);
+                animator.SetBool("isDestroyed", true); 
+                Destroy(soul, 1.0f);
             }
         }
         else
