@@ -19,8 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public string horizontalAxis;
     public string verticalAxis;
     private float horizontalDir;
-    private float verticalDir;
-    //private bool isFaceRight = true; 
+    private float verticalDir; 
 
     [SerializeField] public float dashSpeed = 15f;
     [SerializeField] public float dashLength = 0.3f;
@@ -118,6 +117,15 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Platform" && controller.isGrounded == false)
         {
             jump = false; 
+        }
+
+        if (collision.gameObject.name == "UpgradedSoul1")
+        {
+            runSpeed = 60f; 
+        }
+        else if (collision.gameObject.name == "UpgradedSoul2")
+        {
+            dashSpeed = 20f; 
         }
     }
 
