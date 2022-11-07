@@ -5,6 +5,12 @@ using UnityEngine.Events;
 
 public class CharCont : MonoBehaviour
 {
+	[Header("Player Status")]
+	[SerializeField] public int playerHealth = 100;
+	[SerializeField] public bool statusFire;
+	[SerializeField] public bool statusIce;
+	[SerializeField] public bool statusConfusion;
+	
     [SerializeField] public float jumpForce = 400f;
     [SerializeField] public float dashSpeed = 15f;
     //[SerializeField] public float dashLength = 0.3f;
@@ -20,6 +26,7 @@ public class CharCont : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Collider2D dashDisableCollider;
 
+	public Animator animator; 
     private float groundedRadius = 0.2f;
     public bool isGrounded;
     private Rigidbody2D rb2D;
@@ -50,6 +57,47 @@ public class CharCont : MonoBehaviour
             onDashEvent = new BoolEvent(); 
         }
     }
+	
+	public void Start()
+	{
+		Physics.IgnoreLayerCollision(6, 7);
+	}
+	
+	private void OnTriggerEnter2D(Collider2D collision) 
+    {	 
+		if (collision.gameObject.CompareTag("Enemy"))
+		{
+			animator.SetBool("isHit", true);
+			playerHealth-=10;
+			Debug.Log(playerHealth);
+			knockback();
+		}
+		
+		if (collision.gameObject.CompareTag("Bullet"))
+		{
+			animator.SetBool("isHit", true);
+			playerHealth-=10;
+			Debug.Log(playerHealth);
+			knockback();
+			Destroy(collision.gameObject);
+		}
+		
+		if (playerHealth <= 0)
+			animator.SetBool("isDead", true);
+    }
+	
+	public void endHit()
+	{
+		animator.SetBool("isHit", false);
+	}
+	
+	public void knockback()
+	{
+		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().isFacingRight == true)
+			GetComponent<Rigidbody2D>().AddForce(Vector2.left * 100, ForceMode2D.Impulse);
+		else 
+			GetComponent<Rigidbody2D>().AddForce(Vector2.right * 100, ForceMode2D.Impulse);
+	}
 
     private void FixedUpdate()
     {
@@ -68,6 +116,8 @@ public class CharCont : MonoBehaviour
                 }
             }
         }
+		
+		
     }
 
     public void Move(float move, bool dash, bool jump)
