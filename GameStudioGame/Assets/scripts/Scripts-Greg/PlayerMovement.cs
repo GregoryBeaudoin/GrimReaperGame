@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject projectile; 
 
     public float runSpeed = 40f;
-    public float launchVelocity = 700f; 
+    public float launchVelocity = 700f;
+
+    public bool isExplosive = false; 
 
     float horizontalMove = 0f;
     float verticalMove = 0f; 
@@ -126,6 +128,15 @@ public class PlayerMovement : MonoBehaviour
         else if (collision.gameObject.name == "UpgradedSoul2")
         {
             dashSpeed = 20f; 
+        }
+        else if (collision.gameObject.name == "UpgradedSoul3")
+        {
+            isExplosive = true; 
+            if (projectile.CompareTag("Enemy") && isExplosive == true)
+            {
+                animator.SetBool("isDestroyed", true);
+                Destroy(projectile); 
+            }
         }
     }
 
