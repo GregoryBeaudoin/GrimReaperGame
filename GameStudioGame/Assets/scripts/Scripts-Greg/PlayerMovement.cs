@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public CharCont controller;
     public Rigidbody2D rb2D;
     public Animator animator;
+    public Animator soulAnim; 
     public GameObject projectile; 
 
     public float runSpeed = 40f;
@@ -34,19 +35,25 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().statusIce == true)
-			runSpeed = 20f;
+		if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusIce == true)
+        {
+            runSpeed = 20f; 
+        }
 		else
-			runSpeed = 40f;
+        {
+            runSpeed = 40f; 
+        }
 		
-		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().statusConfusion == true)
-			horizontalMove = Input.GetAxisRaw(horizontalAxis) * -runSpeed;
+		if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusConfusion == true)
+        {
+            horizontalMove = Input.GetAxisRaw(horizontalAxis) * -runSpeed;
+        }
 		else
-			horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
-		
+        {
+            horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
+        }
 		
         verticalMove = Input.GetAxisRaw(verticalAxis);
-
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         //Jump
@@ -92,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isCasting", true);
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
-                animator.SetBool("isDestroyed", true); 
+                //soulAnim.SetBool("isDestroyed", true); 
                 Destroy(soul, 1.0f);
             }
             else
@@ -101,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<SpriteRenderer>().flipX = false; 
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
-                animator.SetBool("isDestroyed", true); 
+                //soulAnim.SetBool("isDestroyed", true); 
                 Destroy(soul, 1.0f);
             }
         }
@@ -131,22 +138,28 @@ public class PlayerMovement : MonoBehaviour
             jump = false; 
         }
 
-        if (collision.gameObject.name == "UpgradedSoul1")
+        if (collision.gameObject.name == "UpgradedSoul4")
         {
             runSpeed = 60f; 
         }
-        else if (collision.gameObject.name == "UpgradedSoul2")
+        else if (collision.gameObject.name == "UpgradedSoul3")
         {
             dashSpeed = 20f; 
         }
-        else if (collision.gameObject.name == "UpgradedSoul3")
+        else if (collision.gameObject.name == "UpgradedSoul5")
         {
             isExplosive = true; 
             if (projectile.CompareTag("Enemy") && isExplosive == true)
             {
-                animator.SetBool("isDestroyed", true);
+                soulAnim.SetBool("isDestroyed", true);
                 Destroy(projectile); 
             }
+        }
+
+        else if (collision.gameObject.name == "UpgradedSoul6")
+        {
+            //IDamageable hit; 
+            //hit.Damage(); 
         }
     }
 
