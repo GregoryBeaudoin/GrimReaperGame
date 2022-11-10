@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator soulAnim; 
     public GameObject projectile; 
 
-    public float runSpeed = 40f;
+    [SerializeField] public float runSpeed = 40f;
     public float launchVelocity = 700f;
 
     public bool isExplosive = false; 
@@ -138,16 +138,19 @@ public class PlayerMovement : MonoBehaviour
             jump = false; 
         }
 
-        if (collision.gameObject.name == "UpgradedSoul4")
+        else if (collision.gameObject.name == "UpgradedSoul4")
         {
-            runSpeed = 60f; 
+            Debug.Log("Increased speed"); 
+            runSpeed = 80f; 
         }
         else if (collision.gameObject.name == "UpgradedSoul3")
         {
+            Debug.Log("Increased dash"); 
             dashSpeed = 20f; 
         }
         else if (collision.gameObject.name == "UpgradedSoul5")
         {
+            Debug.Log("Explosive Souls"); 
             isExplosive = true; 
             if (projectile.CompareTag("Enemy") && isExplosive == true)
             {
@@ -158,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
 
         else if (collision.gameObject.name == "UpgradedSoul6")
         {
+            Debug.Log("Increased damage");
             //IDamageable hit; 
             //hit.Damage(); 
         }
