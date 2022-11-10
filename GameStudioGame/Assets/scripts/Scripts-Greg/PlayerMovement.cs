@@ -39,10 +39,10 @@ public class PlayerMovement : MonoBehaviour
         {
             runSpeed = 20f; 
         }
-		else
+		/*else
         {
             runSpeed = 40f; 
-        }
+        }*/
 		
 		if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusConfusion == true)
         {
@@ -138,17 +138,18 @@ public class PlayerMovement : MonoBehaviour
             jump = false; 
         }
 
-        else if (collision.gameObject.name == "UpgradedSoul4")
+        else if (collision.gameObject.name == "SpeedUpgrade")
         {
             Debug.Log("Increased speed"); 
-            runSpeed = 80f; 
+            runSpeed = 60f;
+            
         }
-        else if (collision.gameObject.name == "UpgradedSoul3")
+        else if (collision.gameObject.name == "DashUpgrade")
         {
             Debug.Log("Increased dash"); 
             dashSpeed = 20f; 
         }
-        else if (collision.gameObject.name == "UpgradedSoul5")
+        else if (collision.gameObject.name == "ExplosiveSoulUpgrade")
         {
             Debug.Log("Explosive Souls"); 
             isExplosive = true; 
@@ -159,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        else if (collision.gameObject.name == "UpgradedSoul6")
+        else if (collision.gameObject.name == "AttackUpgrade")
         {
             Debug.Log("Increased damage");
             //IDamageable hit; 

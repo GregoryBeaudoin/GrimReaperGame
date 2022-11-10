@@ -268,6 +268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c8782ed45f50f4089f1070b8e32527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 100
+  statusFire: 0
+  statusIce: 0
+  statusConfusion: 0
   jumpForce: 400
   dashSpeed: 1
   smoothMove: 0.05
@@ -277,6 +281,7 @@ MonoBehaviour:
     m_Bits: 23
   groundCheck: {fileID: 4631431196489593446}
   dashDisableCollider: {fileID: 4631431196663585664}
+  animator: {fileID: 4631431196663585660}
   isGrounded: 0
   isFacingRight: 1
   onLandEvent:
@@ -300,9 +305,11 @@ MonoBehaviour:
   controller: {fileID: 4631431196663585671}
   rb2D: {fileID: 4631431196663585665}
   animator: {fileID: 4631431196663585660}
+  soulAnim: {fileID: 0}
   projectile: {fileID: 0}
   runSpeed: 40
   launchVelocity: 700
+  isExplosive: 0
   horizontalAxis: Horizontal
   verticalAxis: Vertical
   dashSpeed: 15
