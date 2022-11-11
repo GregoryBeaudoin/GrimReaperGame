@@ -7,13 +7,14 @@ public class PlayerMovement : MonoBehaviour
     public CharCont controller;
     public Rigidbody2D rb2D;
     public Animator animator;
-    public Animator soulAnim; 
+    //public Animator soulAnim; 
     public GameObject projectile; 
 
     [SerializeField] public float runSpeed = 40f;
     public float launchVelocity = 700f;
 
-    public bool isExplosive = false; 
+    public bool isExplosive = true;
+    public bool isStronger = false; 
 
     float horizontalMove = 0f;
     float verticalMove = 0f; 
@@ -99,7 +100,12 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isCasting", true);
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
-                //soulAnim.SetBool("isDestroyed", true); 
+                if (soul.GetComponent<SoulProjectile>().isHit == true)
+                {
+                    Debug.Log("Stop"); 
+                    soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
+                }
+                        
                 Destroy(soul, 1.0f);
             }
             else
@@ -108,6 +114,15 @@ public class PlayerMovement : MonoBehaviour
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<SpriteRenderer>().flipX = false; 
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
+                if (soul.GetComponent<SoulProjectile>().isHit == true)
+                {
+                    Debug.Log("Stop now"); 
+                    soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
+                }
+                /*if (isExplosive == true)
+                {
+                    soulAnim.SetBool("isDestroyed", true);
+                }*/
                 //soulAnim.SetBool("isDestroyed", true); 
                 Destroy(soul, 1.0f);
             }
@@ -153,16 +168,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Explosive Souls"); 
             isExplosive = true; 
-            if (projectile.CompareTag("Enemy") && isExplosive == true)
+            /*if (projectile.CompareTag("Enemy") && isExplosive == true)
             {
-                soulAnim.SetBool("isDestroyed", true);
+                //soulAnim.SetBool("isDestroyed", true);
                 Destroy(projectile); 
-            }
+            }*/
         }
 
         else if (collision.gameObject.name == "AttackUpgrade")
         {
             Debug.Log("Increased damage");
+            isStronger = true; 
             //IDamageable hit; 
             //hit.Damage(); 
         }
