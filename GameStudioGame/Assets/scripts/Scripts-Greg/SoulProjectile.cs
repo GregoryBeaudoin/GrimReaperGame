@@ -36,7 +36,7 @@ public class SoulProjectile : MonoBehaviour
                 }
             }
             
-            Destroy(projectile, 2.0f); 
+            Destroy(projectile, 0.75f); 
         }
     }
 }

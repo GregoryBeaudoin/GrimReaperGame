@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public CharCont controller;
     public Rigidbody2D rb2D;
     public Animator animator;
-    //public Animator soulAnim; 
     public GameObject projectile; 
 
     [SerializeField] public float runSpeed = 40f;
@@ -106,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
                     soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
                 }
                         
-                Destroy(soul, 1.0f);
+                Destroy(soul, 0.75f);
             }
             else
             {
@@ -119,12 +118,8 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log("Stop now"); 
                     soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
                 }
-                /*if (isExplosive == true)
-                {
-                    soulAnim.SetBool("isDestroyed", true);
-                }*/
-                //soulAnim.SetBool("isDestroyed", true); 
-                Destroy(soul, 1.0f);
+                
+                Destroy(soul, 0.75f);
             }
         }
         else
@@ -168,19 +163,14 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Explosive Souls"); 
             isExplosive = true; 
-            /*if (projectile.CompareTag("Enemy") && isExplosive == true)
-            {
-                //soulAnim.SetBool("isDestroyed", true);
-                Destroy(projectile); 
-            }*/
+            
         }
 
         else if (collision.gameObject.name == "AttackUpgrade")
         {
             Debug.Log("Increased damage");
             isStronger = true; 
-            //IDamageable hit; 
-            //hit.Damage(); 
+            
         }
     }
 
