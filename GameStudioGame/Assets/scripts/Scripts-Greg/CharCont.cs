@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
+using UnityEngine.UI;
 
 public class CharCont : MonoBehaviour
 {
@@ -64,22 +65,25 @@ public class CharCont : MonoBehaviour
 	}
 	
 	private void OnTriggerEnter2D(Collider2D collision) 
-    {	 
-		if (collision.gameObject.CompareTag("Enemy"))
+    {	
+		if(GameObject.Find ("TestPlayer").GetComponent<PlayerMovement> ().isDashing == false)
 		{
-			animator.SetBool("isHit", true);
-			playerHealth-=10;
-			Debug.Log(playerHealth);
-			knockback();
-		}
-		
-		if (collision.gameObject.CompareTag("Bullet"))
-		{
-			animator.SetBool("isHit", true);
-			playerHealth-=10;
-			Debug.Log(playerHealth);
-			knockback();
-			Destroy(collision.gameObject);
+			if (collision.gameObject.CompareTag("Enemy"))
+			{
+				animator.SetBool("isHit", true);
+				playerHealth-=10;
+				Debug.Log(playerHealth);
+				knockback();
+			}
+			
+			if (collision.gameObject.CompareTag("Bullet"))
+			{
+				animator.SetBool("isHit", true);
+				playerHealth-=10;
+				Debug.Log(playerHealth);
+				knockback();
+				Destroy(collision.gameObject);
+			}
 		}
 		
 		if (playerHealth <= 0)
