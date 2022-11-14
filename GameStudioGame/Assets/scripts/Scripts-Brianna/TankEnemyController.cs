@@ -20,10 +20,24 @@ public class TankEnemyController : MonoBehaviour {
     private bool isCooling;
     private float intTimer;
 
+    public int Health {get; set; }
+    
+    public void Damage()
+	{
+		Health++;
+		
+		if (Health > 3){
+			animator.SetBool("isDead", true);
+		}
+	}
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Awake()
     {
         intTimer = timer;
-        animator = GetComponent<Animator>();
     }
 
     void Update ()
