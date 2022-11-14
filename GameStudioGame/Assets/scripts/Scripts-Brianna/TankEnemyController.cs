@@ -49,7 +49,7 @@ public class TankEnemyController : Enemy, IDamageable {
 
         if (inRange)
         {
-            hit = Physics2D.Raycast(raycast.position, transform.right, raycastLength, raycastMask);
+            hit = Physics2D.Raycast(raycast.position, Vector2.left, raycastLength, raycastMask);
             RaycastDebugger();
         }
 
