@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonMovement : MonoBehaviour
+public class TankMovement : MonoBehaviour
 {
     public float speed;
     public float raycastDistance;
@@ -21,12 +21,12 @@ public class CommonMovement : MonoBehaviour
         {
             if (isMovingRight == true)
             {
-                transform.eulerAngles =  new Vector2(0, 180);
+                transform.eulerAngles =  new Vector2(0, 0);
                 isMovingRight = false;
             }
             else
             {
-                transform.eulerAngles =  new Vector2(0, 0);
+                transform.eulerAngles =  new Vector2(0, -180);
                 isMovingRight = true;
             }
         }
