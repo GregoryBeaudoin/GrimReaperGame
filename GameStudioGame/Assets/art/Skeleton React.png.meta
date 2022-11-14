@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: ec55c35b0051446a394cd17ebfc69c6e
+=======
+guid: f51f17f6d4d744a5097a856dcdf1404e
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,8 +134,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: c130b4c8e9564402eb5a44f80afad99a
       internalID: -1877075260
+=======
+      spriteID: caaa3ca5ae4f44fdd918647e657d6576
+      internalID: 1655221553
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -151,8 +160,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: dc2a723b19ac74aa4a5298a208a9a2c5
       internalID: -675267828
+=======
+      spriteID: f9beceb661528448e99145e8f2e54996
+      internalID: 1764907772
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -172,8 +186,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 16a72171dd551405182cdf647815b759
       internalID: -457396294
+=======
+      spriteID: c7824232e04db46c984d234a3cab79e3
+      internalID: -323801100
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -193,8 +212,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 6f239c6b0a0074ec3b1352675d1e799d
       internalID: -646613980
+=======
+      spriteID: 1d11092b7d1624b6d9a0578a49389436
+      internalID: 1744155463
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -210,10 +234,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< Updated upstream
       Skeleton React_2: -457396294
       Skeleton React_3: -646613980
       Skeleton React_0: -1877075260
       Skeleton React_1: -675267828
+=======
+      Skeleton React_2: -323801100
+      Skeleton React_3: 1744155463
+      Skeleton React_0: 1655221553
+      Skeleton React_1: 1764907772
+>>>>>>> Stashed changes
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
