@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankEnemyController : MonoBehaviour {
+public class TankEnemyController : Enemy, IDamageable {
 
     public Transform raycast;
     public LayerMask raycastMask;
@@ -85,7 +85,6 @@ public class TankEnemyController : MonoBehaviour {
 
         if(distance > attackRange)
         {
-            Move();
             StopAttack();
         }
         else if(attackRange >= distance && isCooling == false)
@@ -143,11 +142,11 @@ public class TankEnemyController : MonoBehaviour {
     {
         if(distance > attackRange)
         {
-            Debug.DrawRay(raycast.position, Vector2.left * raycastLength, Color.red);
+            Debug.DrawRay(raycast.position, transform.right * raycastLength, Color.red);
         }
         else if(attackRange > distance)
         {
-            Debug.DrawRay(raycast.position, Vector2.left * raycastLength, Color.green);
+            Debug.DrawRay(raycast.position, transform.right * raycastLength, Color.green);
         }
     }
 
