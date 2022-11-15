@@ -859,6 +859,8 @@ MonoBehaviour:
   - 'Ugh, guess stairs weren''t in the budget. '
   - 'If I had ears, that would have hurt. '
   - 'Something feels different. '
+  - 'Hey. '
+  - 'Hey, you. '
 --- !u!114 &1449730324
 MonoBehaviour:
   m_ObjectHideFlags: 0

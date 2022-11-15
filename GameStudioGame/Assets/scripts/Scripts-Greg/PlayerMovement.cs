@@ -7,7 +7,17 @@ public class PlayerMovement : MonoBehaviour
     public CharCont controller;
     public Rigidbody2D rb2D;
     public Animator animator;
-    public GameObject projectile; 
+    public GameObject projectile;
+    public GameObject companion;
+
+    public GameObject firstFragment;
+    public GameObject firstProjectile;
+    public GameObject secondFragment;
+    public GameObject secondProjectile;
+    public GameObject thirdFragment;
+    public GameObject thirdProjectile;
+    public GameObject fourthFragment;
+    public GameObject fourthProjectile; 
 
     [SerializeField] public float runSpeed = 40f;
     public float launchVelocity = 700f;
@@ -152,25 +162,30 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Increased speed"); 
             runSpeed = 60f;
-            
+            companion = firstFragment;
+            projectile = firstProjectile; 
         }
         else if (collision.gameObject.name == "DashUpgrade")
         {
             Debug.Log("Increased dash"); 
-            dashSpeed = 20f; 
+            dashSpeed = 20f;
+            companion = secondFragment;
+            projectile = secondProjectile; 
         }
         else if (collision.gameObject.name == "ExplosiveSoulUpgrade")
         {
             Debug.Log("Explosive Souls"); 
-            isExplosive = true; 
-            
+            isExplosive = true;
+            companion = thirdFragment;
+            projectile = thirdProjectile; 
         }
 
         else if (collision.gameObject.name == "AttackUpgrade")
         {
             Debug.Log("Increased damage");
-            isStronger = true; 
-            
+            isStronger = true;
+            companion = fourthFragment;
+            projectile = fourthProjectile; 
         }
     }
 

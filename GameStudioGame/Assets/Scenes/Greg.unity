@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 588484163}
   - component: {fileID: 588484162}
   - component: {fileID: 588484164}
+  - component: {fileID: 588484165}
   m_Layer: 0
   m_Name: DashUpgrade
   m_TagString: Untagged
@@ -369,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588484161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.09, y: 0.74, z: 0}
+  m_LocalPosition: {x: 11.09, y: 1.04, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -402,6 +403,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16243835, y: 0.37608448}
   m_EdgeRadius: 0
+--- !u!95 &588484165
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588484161}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b3bd29768f9f614a924ef9302b0d95a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &737882390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -597,6 +618,7 @@ GameObject:
   - component: {fileID: 929950862}
   - component: {fileID: 929950861}
   - component: {fileID: 929950863}
+  - component: {fileID: 929950864}
   m_Layer: 0
   m_Name: AttackUpgrade
   m_TagString: Untagged
@@ -697,6 +719,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19806355, y: 0.35589865}
   m_EdgeRadius: 0
+--- !u!95 &929950864
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929950860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d916f239e417b14f86e162a826f166b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1107514200
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +750,7 @@ GameObject:
   - component: {fileID: 1107514202}
   - component: {fileID: 1107514201}
   - component: {fileID: 1107514203}
+  - component: {fileID: 1107514204}
   m_Layer: 0
   m_Name: ExplosiveSoulUpgrade
   m_TagString: Untagged
@@ -808,6 +851,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1750058, y: 0.3760845}
   m_EdgeRadius: 0
+--- !u!95 &1107514204
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107514200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 828d3f509cb10df428355fadec873dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1582948290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4631431197420093421, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+  m_PrefabInstance: {fileID: 4631431196890899964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1642709933
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +1020,7 @@ GameObject:
   - component: {fileID: 1941284155}
   - component: {fileID: 1941284154}
   - component: {fileID: 1941284156}
+  - component: {fileID: 1941284157}
   m_Layer: 0
   m_Name: SpeedUpgrade
   m_TagString: Untagged
@@ -1019,7 +1088,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941284153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.41, y: 0.65, z: 0}
+  m_LocalPosition: {x: 1.57, y: 0.65, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1052,6 +1121,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1623418, y: 0.36394092}
   m_EdgeRadius: 0
+--- !u!95 &1941284157
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941284153}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67dc07bdfb2dcaa44ac63c695dcc6805, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2076315427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,5 +1280,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: companion
+      value: 
+      objectReference: {fileID: 1582948290}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: firstFragment
+      value: 
+      objectReference: {fileID: 1941284153}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: thirdFragment
+      value: 
+      objectReference: {fileID: 1107514200}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: fourthFragment
+      value: 
+      objectReference: {fileID: 929950860}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: secondFragment
+      value: 
+      objectReference: {fileID: 588484161}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: firstProjectile
+      value: 
+      objectReference: {fileID: 4586968778654900867, guid: 701e7c84de5e5fb44bf6b1e11e484888, type: 3}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: thirdProjectile
+      value: 
+      objectReference: {fileID: 5010826891287391256, guid: 39cd5f4f14e073e4f803b2b17cf9fed5, type: 3}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: fourthProjectile
+      value: 
+      objectReference: {fileID: 342146882912826401, guid: 307bd01058081914a8eee29fc1b2fd23, type: 3}
+    - target: {fileID: 4631431196663585670, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: secondProjectile
+      value: 
+      objectReference: {fileID: 8939217171355242303, guid: 2456cb2b7e5ae1f4f993c02c343d199a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
