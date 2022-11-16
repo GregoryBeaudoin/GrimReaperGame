@@ -175,14 +175,16 @@ public class PlayerMovement : MonoBehaviour
             isDasher = true; 
             dashSpeed = 20f;
             //companion = secondFragment;
-            projectile = secondProjectile; 
+            projectile = secondProjectile;
+            Destroy(secondFragment); 
         }
         else if (collision.gameObject.name == "ExplosiveSoulUpgrade")
         {
             Debug.Log("Explosive Souls"); 
             isExplosive = true;
             //companion = thirdFragment;
-            projectile = thirdProjectile; 
+            projectile = thirdProjectile;
+            Destroy(thirdFragment); 
         }
 
         else if (collision.gameObject.name == "AttackUpgrade")
@@ -190,7 +192,8 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Increased damage");
             isStronger = true;
             //companion = fourthFragment;
-            projectile = fourthProjectile; 
+            projectile = fourthProjectile;
+            Destroy(fourthFragment); 
         }
     }
 
