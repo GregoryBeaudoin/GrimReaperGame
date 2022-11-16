@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float dashLength = 0.3f;
     [SerializeField] private float dashBufferLength = 0.1f;
     private float dashBufferCounter;
-    private bool isDashing;
+    public bool isDashing;
     private bool hasDashed;
     private bool canDash => dashBufferCounter > 0f && !hasDashed;
 
