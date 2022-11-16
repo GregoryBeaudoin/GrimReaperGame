@@ -34,6 +34,8 @@ public class MeleeAttack : MonoBehaviour
 				Debug.Log("hit");
 				hit.Damage();
 			}
+			else if (obj.tag == "Bullet")
+				Destroy(obj.gameObject);
 		}
 	}
 }

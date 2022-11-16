@@ -24,14 +24,24 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float dashLength = 0.3f;
     [SerializeField] private float dashBufferLength = 0.1f;
     private float dashBufferCounter;
-    private bool isDashing;
+    public bool isDashing;
     private bool hasDashed;
     private bool canDash => dashBufferCounter > 0f && !hasDashed;
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
+		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().statusIce == true)
+			runSpeed = 20f;
+		else
+			runSpeed = 40f;
+		
+		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().statusConfusion == true)
+			horizontalMove = Input.GetAxisRaw(horizontalAxis) * -runSpeed;
+		else
+			horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
+		
+		
         verticalMove = Input.GetAxisRaw(verticalAxis);
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
