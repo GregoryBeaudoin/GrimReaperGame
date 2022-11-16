@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -160,6 +161,12 @@ public class PlayerMovement : MonoBehaviour
             jump = false; 
         }
 
+        else if (collision.gameObject.name == "FirstSoul")
+        {
+            Debug.Log("Next Scene");
+            LoadNextScene(); 
+        }
+
         else if (collision.gameObject.name == "SpeedUpgrade")
         {
             Debug.Log("Increased speed");
@@ -242,5 +249,12 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         rb2D.gravityScale = 1f;
         hasDashed = false; 
+    }
+
+    void LoadNextScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        int nextLevelBuildIndex = 1 - scene.buildIndex;
+        SceneManager.LoadScene(nextLevelBuildIndex);
     }
 }
