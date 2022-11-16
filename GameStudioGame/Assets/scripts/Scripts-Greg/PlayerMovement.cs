@@ -23,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
     public float launchVelocity = 700f;
 
     public bool isExplosive = true;
-    public bool isStronger = false; 
+    public bool isStronger = false;
+    public bool isFaster = false;
+    public bool isDasher = false; 
 
     float horizontalMove = 0f;
     float verticalMove = 0f; 
@@ -160,23 +162,26 @@ public class PlayerMovement : MonoBehaviour
 
         else if (collision.gameObject.name == "SpeedUpgrade")
         {
-            Debug.Log("Increased speed"); 
+            Debug.Log("Increased speed");
+            isFaster = true; 
             runSpeed = 60f;
-            companion = firstFragment;
-            projectile = firstProjectile; 
+            //companion = firstFragment;
+            projectile = firstProjectile;
+            Destroy(firstFragment); 
         }
         else if (collision.gameObject.name == "DashUpgrade")
         {
-            Debug.Log("Increased dash"); 
+            Debug.Log("Increased dash");
+            isDasher = true; 
             dashSpeed = 20f;
-            companion = secondFragment;
+            //companion = secondFragment;
             projectile = secondProjectile; 
         }
         else if (collision.gameObject.name == "ExplosiveSoulUpgrade")
         {
             Debug.Log("Explosive Souls"); 
             isExplosive = true;
-            companion = thirdFragment;
+            //companion = thirdFragment;
             projectile = thirdProjectile; 
         }
 
@@ -184,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Increased damage");
             isStronger = true;
-            companion = fourthFragment;
+            //companion = fourthFragment;
             projectile = fourthProjectile; 
         }
     }
