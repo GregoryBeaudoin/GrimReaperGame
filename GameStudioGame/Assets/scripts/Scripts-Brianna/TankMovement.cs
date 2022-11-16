@@ -14,19 +14,19 @@ public class TankMovement : MonoBehaviour
     
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
         RaycastHit2D groundCheck = Physics2D.Raycast(groundDetection.position, Vector2.down, raycastDistance);
 
         if (groundCheck.collider == false)
         {
             if (isMovingRight == true)
             {
-                transform.eulerAngles =  new Vector2(0, 0);
+                transform.eulerAngles =  new Vector2(0, 180);
                 isMovingRight = false;
             }
             else
             {
-                transform.eulerAngles =  new Vector2(0, -180);
+                transform.eulerAngles =  new Vector2(0, 0);
                 isMovingRight = true;
             }
         }

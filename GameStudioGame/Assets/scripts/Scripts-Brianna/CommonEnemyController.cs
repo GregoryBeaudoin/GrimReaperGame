@@ -14,6 +14,7 @@ public class CommonEnemyController : Enemy, IDamageable
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Vector2 boxSize;
     private bool isGrounded;
+    private bool isJumping = false;
 
     private Rigidbody2D enemyRB;
     public Animator animator;
@@ -61,12 +62,13 @@ public class CommonEnemyController : Enemy, IDamageable
     {
         float distanceFromPlayer = player.position.x - transform.position.x;
 
+        Debug.Log(isGrounded);
+
         if (isGrounded)
         {
             enemyRB.AddForce(new Vector2(distanceFromPlayer, pounceHeight), ForceMode2D.Impulse);
+            animator.SetBool("isAttacking", true);
         }
-
-        animator.SetBool("isAttacking", true);
     }
 
     void OnDrawGizmosSelected()

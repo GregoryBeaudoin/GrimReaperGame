@@ -26,9 +26,24 @@ public class TankEnemyController : Enemy, IDamageable {
 	{
 		Health++;
 		
+        knockback();
+
 		if (Health > 3){
 			animator.SetBool("isDead", true);
 		}
+	}
+
+    public void Dead()
+	{
+		Destroy(gameObject);
+	}
+	
+	public void knockback()
+	{
+		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().isFacingRight == true)
+			GetComponent<Rigidbody2D>().AddForce(Vector2.right * 150, ForceMode2D.Impulse);
+		else 
+			GetComponent<Rigidbody2D>().AddForce(Vector2.left * 150, ForceMode2D.Impulse);
 	}
 
     void Start()
