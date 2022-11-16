@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - ignore
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - Enemy
   - hitbox
-  - 
-  - 
+  - Player
+  - Bullet
   - 
   - 
   - 
