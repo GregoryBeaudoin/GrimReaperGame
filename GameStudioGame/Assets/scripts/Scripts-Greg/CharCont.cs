@@ -13,14 +13,8 @@ public class CharCont : MonoBehaviour
 	[SerializeField] public bool statusIce;
 	[SerializeField] public bool statusConfusion;
 	
-    [SerializeField] public float jumpForce = 400f;
+    [SerializeField] public float jumpForce = 300f;
     [SerializeField] public float dashSpeed = 15f;
-    //[SerializeField] public float dashLength = 0.3f;
-    //[SerializeField] private float dashBufferLength = 0.1f;
-    //private float dashBufferCounter;
-    //private bool isDashing;
-    //private bool hasDashed;
-    //private bool canDash => dashBufferCounter > 0f && !hasDashed; 
 
     [Range(0, 0.3f)] [SerializeField] public float smoothMove = 0.05f;
     [SerializeField] private bool airControl = false;
@@ -177,9 +171,9 @@ public class CharCont : MonoBehaviour
             }
         }
 
-        if (isGrounded && jump)
+        if (jump)
         {
-            isGrounded = false;
+            //isGrounded = false;
             rb2D.AddForce(new Vector2(0f, jumpForce)); 
         }
     }

@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb2D;
     public Animator animator;
     public GameObject projectile;
-    public GameObject companion;
 
     public GameObject firstFragment;
     public GameObject firstProjectile;
@@ -48,14 +47,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusIce == true)
+        if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusIce == true)
         {
-            runSpeed = 20f; 
+            runSpeed = 20f;
         }
-		/*else
-        {
-            runSpeed = 40f; 
-        }*/
 		
 		if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusConfusion == true)
         {
@@ -172,7 +167,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Increased speed");
             isFaster = true; 
             runSpeed = 60f;
-            //companion = firstFragment;
             projectile = firstProjectile;
             Destroy(firstFragment);
             LoadNextScene(); 
@@ -182,7 +176,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Increased dash");
             isDasher = true; 
             dashSpeed = 20f;
-            //companion = secondFragment;
             projectile = secondProjectile;
             Destroy(secondFragment);
             LoadNextScene(); 
@@ -191,7 +184,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Explosive Souls"); 
             isExplosive = true;
-            //companion = thirdFragment;
             projectile = thirdProjectile;
             Destroy(thirdFragment); 
         }
@@ -200,7 +192,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Increased damage");
             isStronger = true;
-            //companion = fourthFragment;
             projectile = fourthProjectile;
             Destroy(fourthFragment); 
         }
