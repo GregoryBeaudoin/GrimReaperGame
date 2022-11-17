@@ -837,7 +837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.38861, y: 188.04999}
+  m_AnchoredPosition: {x: -3, y: 162}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449730323
@@ -856,9 +856,13 @@ MonoBehaviour:
   sentences:
   - '(Sighs) Here we go again. '
   - 'Let''s get going. '
+  - 'Press the arrow keys to move left and right. '
   - 'Ugh, guess stairs weren''t in the budget. '
+  - 'Press Space to Jump. '
   - 'If I had ears, that would have hurt. '
+  - 'Press Left-Shift to attack. Press C to cast. '
   - 'Something feels different. '
+  - 'Press the  down-arrow key to dash. '
   - 'Hey. '
   - 'Hey, you. '
 --- !u!114 &1449730324
@@ -1526,6 +1530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1873978457}
   dialogueText: {fileID: 757003605}
+  startButton: {fileID: 1449730324}
   animator: {fileID: 1516242660}
 --- !u!4 &2122103218
 Transform:

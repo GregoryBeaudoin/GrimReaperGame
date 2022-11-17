@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4631431196489593445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.8239117, y: -3.128848, z: 0.03442612}
+  m_LocalPosition: {x: 0.01, y: -0.8, z: 0.03442612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -245,11 +245,11 @@ GameObject:
   - component: {fileID: 4631431196663585667}
   - component: {fileID: 4631431196663585666}
   - component: {fileID: 4631431196663585665}
-  - component: {fileID: 4631431196663585664}
   - component: {fileID: 4631431196663585671}
   - component: {fileID: 4631431196663585670}
   - component: {fileID: 4631431196663585660}
   - component: {fileID: 4631431196663585661}
+  - component: {fileID: 4426902348140690823}
   m_Layer: 8
   m_Name: TestPlayer
   m_TagString: Player
@@ -266,7 +266,7 @@ Transform:
   m_GameObject: {fileID: 4631431196663585669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.15, y: 1.952, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4631431196489593446}
@@ -349,32 +349,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4631431196663585664
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4631431196663585669}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.053812027, y: -0.32988596}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.107624, y: 0.95433927}
-  m_EdgeRadius: 0
 --- !u!114 &4631431196663585671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +365,7 @@ MonoBehaviour:
   statusFire: 0
   statusIce: 0
   statusConfusion: 0
-  jumpForce: 400
+  jumpForce: 300
   dashSpeed: 1
   smoothMove: 0.05
   airControl: 1
@@ -399,7 +373,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 23
   groundCheck: {fileID: 4631431196489593446}
-  dashDisableCollider: {fileID: 4631431196663585664}
+  dashDisableCollider: {fileID: 4426902348140690823}
   animator: {fileID: 4631431196663585660}
   isGrounded: 0
   isFacingRight: 1
@@ -425,14 +399,13 @@ MonoBehaviour:
   rb2D: {fileID: 4631431196663585665}
   animator: {fileID: 4631431196663585660}
   projectile: {fileID: 6208522927420289046, guid: 406b21fc8e0c48f4d873ee2b446e30e5, type: 3}
-  companion: {fileID: 0}
-  firstFragment: {fileID: 0}
+  firstFragment: {fileID: 9067226293043458499, guid: 5d585f4a657491a49a250629ccd8aea8, type: 3}
   firstProjectile: {fileID: 4586968778654900867, guid: 701e7c84de5e5fb44bf6b1e11e484888, type: 3}
-  secondFragment: {fileID: 0}
+  secondFragment: {fileID: 1381200124269763375, guid: 39f50e0390a3a1245b7c65c23e2be5ce, type: 3}
   secondProjectile: {fileID: 8939217171355242303, guid: 2456cb2b7e5ae1f4f993c02c343d199a, type: 3}
-  thirdFragment: {fileID: 0}
+  thirdFragment: {fileID: 9098397763952347925, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
   thirdProjectile: {fileID: 5010826891287391256, guid: 39cd5f4f14e073e4f803b2b17cf9fed5, type: 3}
-  fourthFragment: {fileID: 0}
+  fourthFragment: {fileID: 483928621080013540, guid: 2027513f49805d8418ac03d621a132ba, type: 3}
   fourthProjectile: {fileID: 342146882912826401, guid: 307bd01058081914a8eee29fc1b2fd23, type: 3}
   runSpeed: 40
   launchVelocity: 700
@@ -483,6 +456,22 @@ MonoBehaviour:
   hitboxMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!70 &4426902348140690823
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4631431196663585669}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09373252, y: -0.35930806}
+  m_Size: {x: 1.0002811, y: 1.0002811}
+  m_Direction: 0
 --- !u!1 &4631431196702631883
 GameObject:
   m_ObjectHideFlags: 0
