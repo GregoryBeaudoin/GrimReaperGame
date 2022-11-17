@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class CharCont : MonoBehaviour
 {
@@ -87,7 +88,19 @@ public class CharCont : MonoBehaviour
 		}
 		
 		if (playerHealth <= 0)
-			animator.SetBool("isDead", true);
+        {
+            animator.SetBool("isDead", true);
+            
+        }
+			
+            
+    }
+
+    public void RestartScene()
+    {
+        Scene level = SceneManager.GetActiveScene();
+        int currentLevel = level.buildIndex;
+        SceneManager.LoadScene(currentLevel);
     }
 	
 	public void endHit()

@@ -174,7 +174,8 @@ public class PlayerMovement : MonoBehaviour
             runSpeed = 60f;
             //companion = firstFragment;
             projectile = firstProjectile;
-            Destroy(firstFragment); 
+            Destroy(firstFragment);
+            LoadNextScene(); 
         }
         else if (collision.gameObject.name == "DashUpgrade")
         {
@@ -183,7 +184,8 @@ public class PlayerMovement : MonoBehaviour
             dashSpeed = 20f;
             //companion = secondFragment;
             projectile = secondProjectile;
-            Destroy(secondFragment); 
+            Destroy(secondFragment);
+            LoadNextScene(); 
         }
         else if (collision.gameObject.name == "ExplosiveSoulUpgrade")
         {
@@ -254,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
     void LoadNextScene()
     {
         Scene scene = SceneManager.GetActiveScene();
-        int nextLevelBuildIndex = 1 - scene.buildIndex;
+        int nextLevelBuildIndex = 1 + scene.buildIndex;
         SceneManager.LoadScene(nextLevelBuildIndex);
     }
 }

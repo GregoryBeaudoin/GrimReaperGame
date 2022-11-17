@@ -192,11 +192,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f0839aa02810314899663dea4466ce4, type: 3}
---- !u!1 &71668975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3639756397773195353, guid: 0f0839aa02810314899663dea4466ce4, type: 3}
-  m_PrefabInstance: {fileID: 71668974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &122968792
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testPOS: {fileID: 443877895}
-  flyEnemy: {fileID: 71668975}
+  flyEnemy: {fileID: 5476578571728382746, guid: 7e7e0645ffdb6554cbccf2690974697c, type: 3}
   flyEnemySwarm: 3.5
 --- !u!4 &443877895
 Transform:
@@ -1336,6 +1331,7 @@ MonoBehaviour:
   rooms: []
   waitTime: 2
   boss: {fileID: 1898445321837384, guid: 09e14c596e782a742829f1166838514d, type: 3}
+  powerUp: {fileID: 0}
 --- !u!1 &1713306765
 GameObject:
   m_ObjectHideFlags: 0

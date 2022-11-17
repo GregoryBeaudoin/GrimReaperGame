@@ -266,7 +266,7 @@ Transform:
   m_GameObject: {fileID: 4631431196663585669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.15, y: 1.952, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4631431196489593446}
@@ -362,7 +362,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.053812027, y: -0.32988596}
+  m_Offset: {x: -0.07538226, y: -0.35280544}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -373,7 +373,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.107624, y: 0.95433927}
+  m_Size: {x: 0.97820276, y: 0.8152902}
   m_EdgeRadius: 0
 --- !u!114 &4631431196663585671
 MonoBehaviour:
@@ -401,7 +401,7 @@ MonoBehaviour:
   groundCheck: {fileID: 4631431196489593446}
   dashDisableCollider: {fileID: 4631431196663585664}
   animator: {fileID: 4631431196663585660}
-  isGrounded: 0
+  isGrounded: 1
   isFacingRight: 1
   onLandEvent:
     m_PersistentCalls:

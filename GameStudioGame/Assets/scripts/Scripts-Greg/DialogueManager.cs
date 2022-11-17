@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-//using UnityEngine.UI; 
+using UnityEngine.UI; 
 
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+
+    public Button startButton; 
 
     public Animator animator;
 
@@ -64,6 +66,9 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        Destroy(startButton);
+        startButton.GetComponent<Image>().enabled = false;
+        //startButton.GetComponent<TextMeshPro>().enabled = false; 
 
         Debug.Log("End of conversation."); 
     }
