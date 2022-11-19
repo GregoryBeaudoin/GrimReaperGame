@@ -7,7 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     public string title;
 
-    [TextArea(3, 10)]
+    [TextArea(3, 15)]
     public string[] sentences; 
 
 }
