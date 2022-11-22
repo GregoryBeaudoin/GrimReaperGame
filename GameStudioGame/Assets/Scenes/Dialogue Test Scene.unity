@@ -192,7 +192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - Where's the rest
+  - 'Hey. '
+  - 'Hey, you. '
+  - 'Where''s the rest? '
   - '(Sigh) You''re dead and your soul''s only one color. Where''s the rest? '
   - "(Big sigh) Oh boy. Look, you died.\r When things die, they come here. The\r
     Slumbering City. Where every Soul\r\npasses into and wanders out of.\r Those
@@ -4640,9 +4642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - "Damn that\u2019s a big husk, I\u2019m really\r not feeling this.\r"
-  - "(Groan) Figure of speech. \r"
-  - "Hey, remember how you said you like\r to help people?\r"
+  - "Damn, lots of husks. I may need\r some... Hey remember how you said\r you like
+    to help people?\r"
   - Yup. (Reaper grabs soul)
   - 'Press C to cast. '
 --- !u!114 &278269296
@@ -24279,7 +24280,7 @@ GameObject:
   - component: {fileID: 1449730323}
   - component: {fileID: 1449730327}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: 'StartButton (Reaper Pre-Tutorial) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24320,17 +24321,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - '(Sighs) Here we go again. '
-  - 'Let''s get going. '
-  - 'Press the arrow keys to move left and right. '
-  - 'Ugh, guess stairs weren''t in the budget. '
-  - 'Press Space to Jump. '
-  - 'If I had ears, that would have hurt. '
-  - 'Press Left-Shift to attack. Press C to cast. '
-  - 'Something feels different. '
-  - 'Press the  down-arrow key to dash. '
-  - 'Hey. '
-  - 'Hey, you. '
+  - "(Sighs) Here we go again. Just\r another day of work. Clicking left\r and right
+    to move. Jumping by\r clicking spacebar. Dashing with a\r down arrow. And if
+    I want to stay\r alive pushing left-shift to attack\r using my scythe. Not sure
+    why it\u2019s\r so complex, but a job's a job.\r"
 --- !u!114 &1449730324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25658,7 +25652,7 @@ GameObject:
   - component: {fileID: 1516242658}
   - component: {fileID: 1516242660}
   m_Layer: 5
-  m_Name: DialogueBox
+  m_Name: 'DialogueBox (Reaper Pre-Tutorial) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
