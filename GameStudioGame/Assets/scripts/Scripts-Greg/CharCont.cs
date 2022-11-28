@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class CharCont : MonoBehaviour
 {
-    [SerializeField] public float jumpForce = 400f;
+	[Header("Player Status")]
+	[SerializeField] public int playerHealth = 100;
+	[SerializeField] public bool statusFire;
+	[SerializeField] public bool statusIce;
+	[SerializeField] public bool statusConfusion;
+	
+    [SerializeField] public float jumpForce = 300f;
     [SerializeField] public float dashSpeed = 15f;
-    //[SerializeField] public float dashLength = 0.3f;
-    //[SerializeField] private float dashBufferLength = 0.1f;
-    //private float dashBufferCounter;
-    //private bool isDashing;
-    //private bool hasDashed;
-    //private bool canDash => dashBufferCounter > 0f && !hasDashed; 
 
     [Range(0, 0.3f)] [SerializeField] public float smoothMove = 0.05f;
     [SerializeField] private bool airControl = false;
@@ -20,6 +22,7 @@ public class CharCont : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Collider2D dashDisableCollider;
 
+	public Animator animator; 
     private float groundedRadius = 0.2f;
     public bool isGrounded;
     private Rigidbody2D rb2D;
@@ -50,6 +53,62 @@ public class CharCont : MonoBehaviour
             onDashEvent = new BoolEvent(); 
         }
     }
+	
+	public void Start()
+	{
+		Physics.IgnoreLayerCollision(6, 7);
+	}
+	
+	private void OnTriggerEnter2D(Collider2D collision) 
+    {	
+		if(GameObject.Find ("TestPlayer").GetComponent<PlayerMovement> ().isDashing == false)
+		{
+			if (collision.gameObject.CompareTag("Enemy"))
+			{
+				animator.SetBool("isHit", true);
+				playerHealth-=10;
+				Debug.Log(playerHealth);
+				knockback();
+			}
+			
+			if (collision.gameObject.CompareTag("Bullet"))
+			{
+				animator.SetBool("isHit", true);
+				playerHealth-=10;
+				Debug.Log(playerHealth);
+				knockback();
+				Destroy(collision.gameObject);
+			}
+		}
+		
+		if (playerHealth <= 0)
+        {
+            animator.SetBool("isDead", true);
+            
+        }
+			
+            
+    }
+
+    public void RestartScene()
+    {
+        Scene level = SceneManager.GetActiveScene();
+        int currentLevel = level.buildIndex;
+        SceneManager.LoadScene(currentLevel);
+    }
+	
+	public void endHit()
+	{
+		animator.SetBool("isHit", false);
+	}
+	
+	public void knockback()
+	{
+		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().isFacingRight == true)
+			GetComponent<Rigidbody2D>().AddForce(Vector2.left * 100, ForceMode2D.Impulse);
+		else 
+			GetComponent<Rigidbody2D>().AddForce(Vector2.right * 100, ForceMode2D.Impulse);
+	}
 
     private void FixedUpdate()
     {
@@ -68,6 +127,8 @@ public class CharCont : MonoBehaviour
                 }
             }
         }
+		
+		
     }
 
     public void Move(float move, bool dash, bool jump)
@@ -110,9 +171,9 @@ public class CharCont : MonoBehaviour
             }
         }
 
-        if (isGrounded && jump)
+        if (jump)
         {
-            isGrounded = false;
+            //isGrounded = false;
             rb2D.AddForce(new Vector2(0f, jumpForce)); 
         }
     }

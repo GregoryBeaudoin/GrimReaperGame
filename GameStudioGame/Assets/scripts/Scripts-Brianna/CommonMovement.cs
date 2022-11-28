@@ -4,38 +4,31 @@ using UnityEngine;
 
 public class CommonMovement : MonoBehaviour
 {
-    [SerializeField] float pounceHeight;
-    [SerializeField] Transform player;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask groundLayer;
-    [SerializeField] Vector2 boxSize;
+    public float speed;
+    public float raycastDistance;
+    public Transform groundDetection;
+
     private bool isGrounded;
-
     private Rigidbody2D enemyRB;
-
-    // Start is called before the first frame update
-    void Start()
+    private bool isMovingRight = true;
+    
+    void Update()
     {
-        enemyRB = GetComponent<Rigidbody2D>();
-    }
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        RaycastHit2D groundCheck = Physics2D.Raycast(groundDetection.position, Vector2.down, raycastDistance);
 
-    void FixedUpdate()
-    {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0, groundLayer);  
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (groundCheck.collider == false)
         {
-            JumpAttack();
-        }
-    }
-
-    void JumpAttack()
-    {
-        float distanceFromPlayer = player.position.x - transform.position.x;
-
-        if (isGrounded)
-        {
-            enemyRB.AddForce(new Vector2(distanceFromPlayer, pounceHeight), ForceMode2D.Impulse);
+            if (isMovingRight == true)
+            {
+                transform.eulerAngles =  new Vector2(0, 180);
+                isMovingRight = false;
+            }
+            else
+            {
+                transform.eulerAngles =  new Vector2(0, 0);
+                isMovingRight = true;
+            }
         }
     }
 }

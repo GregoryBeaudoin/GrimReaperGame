@@ -2,25 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonEnemyController : MonoBehaviour
+public class CommonEnemyController : Enemy, IDamageable
 {
+	public int Health {get; set; }
     public float speed;
     public float lineOfSight;
+
     [SerializeField] float pounceHeight;
     [SerializeField] Transform player;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Vector2 boxSize;
     private bool isGrounded;
+    private bool isJumping = false;
 
     private Rigidbody2D enemyRB;
+    public Animator animator;
 
-    // Start is called before the first frame update
+	
+	public void Damage()
+	{
+		Debug.Log(Health);
+		Health++;
+		
+		if (Health > 5){
+            animator.SetBool("isDead", true);
+			Debug.Log("Dead");
+			Destroy(gameObject);
+		}
+	}
+
+   // Start is called before the first frame update
     void Start()
     {
         enemyRB = GetComponent<Rigidbody2D>();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,15 +51,23 @@ public class CommonEnemyController : MonoBehaviour
         {
             JumpAttack();
         }
+
+        else
+        {
+            animator.SetBool("isAttacking", false);
+        }
     }
 
     void JumpAttack()
     {
         float distanceFromPlayer = player.position.x - transform.position.x;
 
+        Debug.Log(isGrounded);
+
         if (isGrounded)
         {
             enemyRB.AddForce(new Vector2(distanceFromPlayer, pounceHeight), ForceMode2D.Impulse);
+            animator.SetBool("isAttacking", true);
         }
     }
 

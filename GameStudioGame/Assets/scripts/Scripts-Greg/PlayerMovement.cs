@@ -1,14 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharCont controller;
     public Rigidbody2D rb2D;
-    public Animator animator; 
+    public Animator animator;
+    public GameObject projectile;
 
-    public float runSpeed = 40f;
+    public GameObject firstFragment;
+    public GameObject firstProjectile;
+    public GameObject secondFragment;
+    public GameObject secondProjectile;
+    public GameObject thirdFragment;
+    public GameObject thirdProjectile;
+    public GameObject fourthFragment;
+    public GameObject fourthProjectile; 
+
+    [SerializeField] public float runSpeed = 40f;
+    public float launchVelocity = 700f;
+
+    public bool isExplosive = true;
+    public bool isStronger = false;
+    public bool isFaster = false;
+    public bool isDasher = false; 
 
     float horizontalMove = 0f;
     float verticalMove = 0f; 
@@ -17,39 +34,37 @@ public class PlayerMovement : MonoBehaviour
     public string horizontalAxis;
     public string verticalAxis;
     private float horizontalDir;
-    private float verticalDir;
-    //private bool isFaceRight = true; 
+    private float verticalDir; 
 
     [SerializeField] public float dashSpeed = 15f;
     [SerializeField] public float dashLength = 0.3f;
     [SerializeField] private float dashBufferLength = 0.1f;
     private float dashBufferCounter;
-    private bool isDashing;
+    public bool isDashing;
     private bool hasDashed;
     private bool canDash => dashBufferCounter > 0f && !hasDashed;
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
+        if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusIce == true)
+        {
+            runSpeed = 20f;
+        }
+		
+		if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusConfusion == true)
+        {
+            horizontalMove = Input.GetAxisRaw(horizontalAxis) * -runSpeed;
+        }
+		else
+        {
+            horizontalMove = Input.GetAxisRaw(horizontalAxis) * runSpeed;
+        }
+		
         verticalMove = Input.GetAxisRaw(verticalAxis);
-
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        /*if (Input.GetButtonDown("Jump") && (controller.isGrounded == true))
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                jump = true;
-                animator.SetBool("isJumping", true);
-            }
-            else
-            {
-                jump = false;
-                animator.SetBool("isJumping", false);
-            }
-        }*/
-
+        //Jump
         if (Input.GetButtonDown("Jump") && (controller.isGrounded = true)) 
         {
             jump = true;
@@ -61,11 +76,18 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false); 
         }
 
-		if (Input.GetButtonDown("MainAttack"))
-			animator.SetBool("isAttacking", true);
-		else
-			animator.SetBool("isAttacking", false);
 
+        //Attack
+		if (Input.GetButtonDown("MainAttack"))
+        {
+            animator.SetBool("isAttacking", true);
+        }
+		else
+        {
+            animator.SetBool("isAttacking", false);
+        }	
+			
+        //Dash
         if (Input.GetButtonDown("Dash"))
         {
             dashBufferCounter = dashBufferLength;
@@ -75,6 +97,42 @@ public class PlayerMovement : MonoBehaviour
         {
             dashBufferCounter -= Time.deltaTime;
             animator.SetBool("isDashing", false); 
+        }
+
+        //Cast
+        if (Input.GetButtonDown("Cast"))
+        {
+            if (controller.isFacingRight)
+            {
+                animator.SetBool("isCasting", true);
+                GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
+                soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
+                if (soul.GetComponent<SoulProjectile>().isHit == true)
+                {
+                    Debug.Log("Stop"); 
+                    soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
+                }
+                        
+                Destroy(soul, 0.75f);
+            }
+            else
+            {
+                animator.SetBool("isCasting", true);
+                GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
+                soul.GetComponent<SpriteRenderer>().flipX = false; 
+                soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
+                if (soul.GetComponent<SoulProjectile>().isHit == true)
+                {
+                    Debug.Log("Stop now"); 
+                    soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
+                }
+                
+                Destroy(soul, 0.75f);
+            }
+        }
+        else
+        {
+            animator.SetBool("isCasting", false); 
         }
     }
 
@@ -96,6 +154,46 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Platform" && controller.isGrounded == false)
         {
             jump = false; 
+        }
+
+        else if (collision.gameObject.name == "FirstSoul")
+        {
+            Debug.Log("Next Scene");
+            LoadNextScene(); 
+        }
+
+        else if (collision.gameObject.name == "SpeedUpgrade")
+        {
+            Debug.Log("Increased speed");
+            isFaster = true; 
+            runSpeed = 60f;
+            projectile = firstProjectile;
+            Destroy(firstFragment);
+            LoadNextScene(); 
+        }
+        else if (collision.gameObject.name == "DashUpgrade")
+        {
+            Debug.Log("Increased dash");
+            isDasher = true; 
+            dashSpeed = 20f;
+            projectile = secondProjectile;
+            Destroy(secondFragment);
+            LoadNextScene(); 
+        }
+        else if (collision.gameObject.name == "ExplosiveSoulUpgrade")
+        {
+            Debug.Log("Explosive Souls"); 
+            isExplosive = true;
+            projectile = thirdProjectile;
+            Destroy(thirdFragment); 
+        }
+
+        else if (collision.gameObject.name == "AttackUpgrade")
+        {
+            Debug.Log("Increased damage");
+            isStronger = true;
+            projectile = fourthProjectile;
+            Destroy(fourthFragment); 
         }
     }
 
@@ -144,5 +242,12 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         rb2D.gravityScale = 1f;
         hasDashed = false; 
+    }
+
+    void LoadNextScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        int nextLevelBuildIndex = 1 + scene.buildIndex;
+        SceneManager.LoadScene(nextLevelBuildIndex);
     }
 }
