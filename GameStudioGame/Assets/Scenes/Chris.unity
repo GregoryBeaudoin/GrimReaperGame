@@ -10807,7 +10807,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 81653063, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.22
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 81653063, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10823,11 +10823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631431196663585667, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.1
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4631431196663585667, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0382935
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4631431196663585667, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10885,6 +10885,10 @@ PrefabInstance:
       propertyPath: secondFragment
       value: 
       objectReference: {fileID: 1381200124269763375, guid: 39f50e0390a3a1245b7c65c23e2be5ce, type: 3}
+    - target: {fileID: 4631431196702631883, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
 --- !u!1 &188458118
@@ -73857,9 +73861,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7818814516700017317, guid: 108a96d7e2b1f1149af37a5ca31b86e8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7818814517099991902, guid: 108a96d7e2b1f1149af37a5ca31b86e8, type: 3}
       propertyPath: m_Name
       value: CommonEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818814517099991902, guid: 108a96d7e2b1f1149af37a5ca31b86e8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818814517099991902, guid: 108a96d7e2b1f1149af37a5ca31b86e8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7818814517099991909, guid: 108a96d7e2b1f1149af37a5ca31b86e8, type: 3}
       propertyPath: m_RootOrder
