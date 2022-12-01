@@ -13053,7 +13053,7 @@ GameObject:
   - component: {fileID: 812658563}
   - component: {fileID: 812658564}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13115,7 +13115,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d4cb020995a9fd4aa27ac349b0edf9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19863,7 +19863,7 @@ GameObject:
   - component: {fileID: 1157397724}
   - component: {fileID: 1157397725}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19925,7 +19925,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d4cb020995a9fd4aa27ac349b0edf9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22521,7 +22521,7 @@ GameObject:
   - component: {fileID: 1348295149}
   - component: {fileID: 1348295150}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22583,7 +22583,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d4cb020995a9fd4aa27ac349b0edf9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24192,7 +24192,7 @@ GameObject:
   - component: {fileID: 1448444278}
   - component: {fileID: 1448444279}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24254,7 +24254,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d4cb020995a9fd4aa27ac349b0edf9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
