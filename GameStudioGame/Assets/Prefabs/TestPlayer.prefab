@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81653060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7166667, y: -0.6506667, z: -3.3333335}
+  m_LocalPosition: {x: 0, y: 0, z: -3.3333335}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,13 +399,13 @@ MonoBehaviour:
   rb2D: {fileID: 4631431196663585665}
   animator: {fileID: 4631431196663585660}
   projectile: {fileID: 6208522927420289046, guid: 406b21fc8e0c48f4d873ee2b446e30e5, type: 3}
-  firstFragment: {fileID: 9067226293043458499, guid: 5d585f4a657491a49a250629ccd8aea8, type: 3}
+  firstFragment: {fileID: 0}
   firstProjectile: {fileID: 4586968778654900867, guid: 701e7c84de5e5fb44bf6b1e11e484888, type: 3}
-  secondFragment: {fileID: 1381200124269763375, guid: 39f50e0390a3a1245b7c65c23e2be5ce, type: 3}
+  secondFragment: {fileID: 0}
   secondProjectile: {fileID: 8939217171355242303, guid: 2456cb2b7e5ae1f4f993c02c343d199a, type: 3}
-  thirdFragment: {fileID: 9098397763952347925, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+  thirdFragment: {fileID: 0}
   thirdProjectile: {fileID: 5010826891287391256, guid: 39cd5f4f14e073e4f803b2b17cf9fed5, type: 3}
-  fourthFragment: {fileID: 483928621080013540, guid: 2027513f49805d8418ac03d621a132ba, type: 3}
+  fourthFragment: {fileID: 0}
   fourthProjectile: {fileID: 342146882912826401, guid: 307bd01058081914a8eee29fc1b2fd23, type: 3}
   runSpeed: 40
   launchVelocity: 700
