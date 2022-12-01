@@ -22,14 +22,31 @@ public class CommonEnemyController : Enemy, IDamageable
 	
 	public void Damage()
 	{
-		Debug.Log(Health);
 		Health++;
+
+		if (GameObject.Find("TestPlayer").GetComponent<PlayerMovement>().isStronger == true)
+        {
+			Health += 1; 
+        }
+
+			knockback();
 		
 		if (Health > 5){
-            animator.SetBool("isDead", true);
-			Debug.Log("Dead");
-			Destroy(gameObject);
+			animator.SetBool("isDead", true);
 		}
+	}
+	
+	public void Dead()
+	{
+		Destroy(gameObject);
+	}
+	
+	public void knockback()
+	{
+		if (GameObject.Find ("TestPlayer").GetComponent<CharCont> ().isFacingRight == true)
+			GetComponent<Rigidbody2D>().AddForce(Vector2.right * 150, ForceMode2D.Impulse);
+		else 
+			GetComponent<Rigidbody2D>().AddForce(Vector2.left * 150, ForceMode2D.Impulse);
 	}
 
    // Start is called before the first frame update
