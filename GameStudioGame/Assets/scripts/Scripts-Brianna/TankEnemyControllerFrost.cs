@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankEnemyControllerMolten : Enemy, IDamageable {
-
+public class TankEnemyControllerFrost : Enemy, IDamageable
+{
     public Transform raycast;
     public LayerMask raycastMask;
     public float raycastLength;
@@ -118,9 +118,9 @@ public class TankEnemyControllerMolten : Enemy, IDamageable {
     {
         animator.SetBool("isWalking", true);
 
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walking-tankmolten"))
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walking-tankfrostƒmo"))
         {
-            Vector2 targetPosition = new Vector2(target.transform.position.x, target.position.y);
+            Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
 
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         }

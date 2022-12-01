@@ -120,7 +120,7 @@ public class TankEnemyController : Enemy, IDamageable {
 
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walking-tank"))
         {
-            Vector2 targetPosition = new Vector2(target.position.x, transform.position.y);
+            Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
 
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         }
