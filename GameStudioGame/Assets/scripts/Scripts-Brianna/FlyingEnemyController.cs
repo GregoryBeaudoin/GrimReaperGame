@@ -14,10 +14,15 @@ public class FlyingEnemyController : Enemy, IDamageable
 	public void Damage()
 	{
 		Health++;
+
+		if (GameObject.Find("TestPlayer").GetComponent<PlayerMovement>().isStronger == true)
+        {
+			Health += 1; 
+        }
+
+			knockback();
 		
-		knockback();
-		
-		if (Health > 3){
+		if (Health > 5){
 			animator.SetBool("isDead", true);
 		}
 	}

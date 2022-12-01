@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Dan Test 1.unity
+    path: Assets/Scenes/Chris.unity
+    guid: 7f5a571210b31324b925636f1af9dfd6
+  - enabled: 1
+    path: Assets/Scenes/Default.unity
     guid: c55076f67c326354181b2d280e216479
+  - enabled: 1
+    path: Assets/Scenes/Ice.unity
+    guid: 343d73489794c574a9c546f29223e58d
+  - enabled: 1
+    path: Assets/Scenes/Lava.unity
+    guid: 16256fd0edbe97c46a2ca13b7ad843a3
   m_configObjects: {}
