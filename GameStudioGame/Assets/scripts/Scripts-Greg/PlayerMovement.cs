@@ -44,6 +44,9 @@ public class PlayerMovement : MonoBehaviour
     private bool hasDashed;
     private bool canDash => dashBufferCounter > 0f && !hasDashed;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource; 
+
     // Update is called once per frame
     void Update()
     {
@@ -68,7 +71,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && (controller.isGrounded = true)) 
         {
             jump = true;
-            animator.SetBool("isJumping", true); 
+            animator.SetBool("isJumping", true);
+            audioSource.clip = audioClip;
+            audioSource.Play(); 
         }
         else if (controller.isGrounded == false)
         {

@@ -7279,7 +7279,7 @@ GameObject:
   - component: {fileID: 473838345}
   - component: {fileID: 473838346}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7341,7 +7341,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4f36b1e4dff9c45a210c33c88b9e37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17939,7 +17939,7 @@ GameObject:
   - component: {fileID: 1085264439}
   - component: {fileID: 1085264440}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18001,7 +18001,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3f176805ac144842834f4b4fe40919f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18612,7 +18612,7 @@ GameObject:
   - component: {fileID: 1127163330}
   - component: {fileID: 1127163331}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18674,7 +18674,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3f176805ac144842834f4b4fe40919f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19779,7 +19779,7 @@ GameObject:
   - component: {fileID: 1156889293}
   - component: {fileID: 1156889294}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19841,7 +19841,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3f176805ac144842834f4b4fe40919f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20536,7 +20536,7 @@ GameObject:
   - component: {fileID: 1215936138}
   - component: {fileID: 1215936139}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20598,7 +20598,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6abd2fe534538f4ebaed015efe878e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -21125,7 +21125,7 @@ GameObject:
   - component: {fileID: 1240188900}
   - component: {fileID: 1240188901}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21187,7 +21187,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f731cb7430df4de4298d5df6314e5171, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -22583,7 +22583,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9d4cb020995a9fd4aa27ac349b0edf9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4f36b1e4dff9c45a210c33c88b9e37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -28032,7 +28032,7 @@ GameObject:
   - component: {fileID: 1654201340}
   - component: {fileID: 1654201341}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28094,7 +28094,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3f176805ac144842834f4b4fe40919f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -29188,7 +29188,7 @@ GameObject:
   - component: {fileID: 1740116809}
   - component: {fileID: 1740116810}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29250,7 +29250,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3f176805ac144842834f4b4fe40919f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -29767,7 +29767,7 @@ GameObject:
   - component: {fileID: 1758977213}
   - component: {fileID: 1758977214}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29829,7 +29829,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4f36b1e4dff9c45a210c33c88b9e37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -30423,7 +30423,7 @@ GameObject:
   - component: {fileID: 1785125402}
   - component: {fileID: 1785125403}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30485,7 +30485,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6abd2fe534538f4ebaed015efe878e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33057,7 +33057,7 @@ GameObject:
   - component: {fileID: 1888963627}
   - component: {fileID: 1888963628}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33119,7 +33119,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4f36b1e4dff9c45a210c33c88b9e37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33141,7 +33141,7 @@ GameObject:
   - component: {fileID: 1920666901}
   - component: {fileID: 1920666902}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33203,7 +33203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6abd2fe534538f4ebaed015efe878e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35954,7 +35954,7 @@ GameObject:
   - component: {fileID: 2094992323}
   - component: {fileID: 2094992324}
   m_Layer: 5
-  m_Name: ReaperModel
+  m_Name: SoulModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36016,7 +36016,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd4f36b1e4dff9c45a210c33c88b9e37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
