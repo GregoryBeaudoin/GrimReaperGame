@@ -420,7 +420,10 @@ MonoBehaviour:
   dashLength: 0.3
   dashBufferLength: 0.1
   isDashing: 0
-  audioClip: {fileID: 8300000, guid: 95b8ce8f4f21749428266f04082c9e52, type: 3}
+  flyingAudioClip: {fileID: 8300000, guid: 95b8ce8f4f21749428266f04082c9e52, type: 3}
+  castingAudioClip: {fileID: 8300000, guid: b38350d281c8f614da926f3dd88d75b7, type: 3}
+  slashingAudioClip: {fileID: 8300000, guid: 6080ed72901935048948ddc7909797f1, type: 3}
+  dashingAudioClip: {fileID: 8300000, guid: ac5b6d0dcace05a408f7aa7a8416c359, type: 3}
   audioSource: {fileID: -8421753605324708027}
 --- !u!95 &4631431196663585660
 Animator:

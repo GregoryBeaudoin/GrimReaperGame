@@ -44,7 +44,10 @@ public class PlayerMovement : MonoBehaviour
     private bool hasDashed;
     private bool canDash => dashBufferCounter > 0f && !hasDashed;
 
-    public AudioClip audioClip;
+    public AudioClip flyingAudioClip;
+    public AudioClip castingAudioClip;
+    public AudioClip slashingAudioClip;
+    public AudioClip dashingAudioClip; 
     public AudioSource audioSource; 
 
     // Update is called once per frame
@@ -72,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("isJumping", true);
-            audioSource.clip = audioClip;
+            audioSource.clip = flyingAudioClip;
             audioSource.Play(); 
         }
         else if (controller.isGrounded == false)
@@ -86,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetButtonDown("MainAttack"))
         {
             animator.SetBool("isAttacking", true);
+            audioSource.clip = slashingAudioClip;
+            audioSource.Play(); 
         }
 		else
         {
@@ -96,7 +101,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Dash"))
         {
             dashBufferCounter = dashBufferLength;
-            animator.SetBool("isDashing", true); 
+            animator.SetBool("isDashing", true);
+            audioSource.clip = dashingAudioClip;
+            audioSource.Play(); 
         }
         else
         {
@@ -110,6 +117,8 @@ public class PlayerMovement : MonoBehaviour
             if (controller.isFacingRight)
             {
                 animator.SetBool("isCasting", true);
+                audioSource.clip = castingAudioClip;
+                audioSource.Play(); 
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
                 if (soul.GetComponent<SoulProjectile>().isHit == true)
@@ -123,6 +132,8 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 animator.SetBool("isCasting", true);
+                audioSource.clip = castingAudioClip;
+                audioSource.Play(); 
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<SpriteRenderer>().flipX = false; 
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(-launchVelocity, 0, 0));
