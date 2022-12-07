@@ -118,7 +118,7 @@ public class TankEnemyControllerFrost : Enemy, IDamageable
     {
         animator.SetBool("isWalking", true);
 
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walking-tankfrostƒmo"))
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walking-tankfrost"))
         {
             Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
 
