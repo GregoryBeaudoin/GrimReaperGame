@@ -8,10 +8,14 @@ using UnityEngine.SceneManagement;
 public class CharCont : MonoBehaviour
 {
 	[Header("Player Status")]
-	[SerializeField] public int playerHealth = 100;
+	[SerializeField] public double playerHealth = 100;
 	[SerializeField] public bool statusFire;
 	[SerializeField] public bool statusIce;
 	[SerializeField] public bool statusConfusion;
+	
+	public GameObject fireEffect;
+    public GameObject iceEffect;
+	public GameObject confusionEffect;
 	
     [SerializeField] public float jumpForce = 300f;
     [SerializeField] public float dashSpeed = 15f;
@@ -40,6 +44,73 @@ public class CharCont : MonoBehaviour
     public BoolEvent onDashEvent;
     private bool wasDashing = false;
 
+	public float effectTimer;
+	public float randomChance;
+	public bool isCountingDown = false;
+
+	public void setFire()
+	{
+		if (isCountingDown == false)
+		{
+			randomChance = Random.Range(1.0f, 4.0f);
+			if (randomChance <= 2.0f)
+			{
+				isCountingDown = true;
+				effectTimer = Random.Range(1.0f, 5.0f);
+				statusFire = true;
+				fireEffect.SetActive(true);
+			}
+		}
+	}
+
+	public void setIce()
+	{
+		if (isCountingDown == false)
+		{
+			randomChance = Random.Range(1.0f, 4.0f);
+			if (randomChance <= 2.0f)
+			{
+				isCountingDown = true;
+				effectTimer = Random.Range(1.0f, 5.0f);
+				statusIce = true;
+				iceEffect.SetActive(true);
+			}
+		}
+	}
+
+	public void setConfusion()
+	{
+		if (isCountingDown == false)
+		{
+			randomChance = Random.Range(1.0f, 4.0f);
+			if (randomChance <= 2.0f)
+			{
+				isCountingDown = true;
+				effectTimer = Random.Range(1.0f, 5.0f);
+				statusConfusion = true;
+				confusionEffect.SetActive(true);
+			}
+		}
+	}
+
+	void Update()
+	{
+		if (effectTimer > 0) {
+			effectTimer -= Time.deltaTime;
+			if (statusFire == true)
+				playerHealth -= .01;
+		}
+		else {
+			isCountingDown = false;
+			statusConfusion = false;
+			confusionEffect.SetActive(false);
+			statusIce = false;
+			iceEffect.SetActive(false);
+			statusFire = false;
+			fireEffect.SetActive(false);
+		}
+	}
+
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>(); 
@@ -65,6 +136,12 @@ public class CharCont : MonoBehaviour
 		{
 			if (collision.gameObject.CompareTag("Enemy"))
 			{
+				if (SceneManager.GetActiveScene().name == "Lava 1" || SceneManager.GetActiveScene().name == "Lava 2" || SceneManager.GetActiveScene().name == "Lava"  )
+					setFire();
+				if (SceneManager.GetActiveScene().name == "Ice 1" || SceneManager.GetActiveScene().name == "Ice 2" || SceneManager.GetActiveScene().name == "Ice"  )
+					setIce();
+				if (SceneManager.GetActiveScene().name == "Default 1" || SceneManager.GetActiveScene().name == "Default 2" || SceneManager.GetActiveScene().name == "Default"  )
+					setConfusion();
 				animator.SetBool("isHit", true);
 				playerHealth-=10;
 				Debug.Log(playerHealth);
@@ -73,6 +150,12 @@ public class CharCont : MonoBehaviour
 			
 			if (collision.gameObject.CompareTag("Bullet"))
 			{
+				if (SceneManager.GetActiveScene().name == "Lava 1" || SceneManager.GetActiveScene().name == "Lava 2" || SceneManager.GetActiveScene().name == "Lava"  )
+					setFire();
+				if (SceneManager.GetActiveScene().name == "Ice 1" || SceneManager.GetActiveScene().name == "Ice 2" || SceneManager.GetActiveScene().name == "Ice"  )
+					setIce();
+				if (SceneManager.GetActiveScene().name == "Default 1" || SceneManager.GetActiveScene().name == "Default 2" || SceneManager.GetActiveScene().name == "Default"  )
+					setConfusion();
 				animator.SetBool("isHit", true);
 				playerHealth-=10;
 				Debug.Log(playerHealth);
