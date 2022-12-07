@@ -13,10 +13,6 @@ public class CharCont : MonoBehaviour
 	[SerializeField] public bool statusIce;
 	[SerializeField] public bool statusConfusion;
 	
-	public GameObject fireEffect;
-    public GameObject iceEffect;
-	public GameObject confusionEffect;
-	
     [SerializeField] public float jumpForce = 300f;
     [SerializeField] public float dashSpeed = 15f;
 
@@ -44,60 +40,6 @@ public class CharCont : MonoBehaviour
     public BoolEvent onDashEvent;
     private bool wasDashing = false;
 
-	public float effectTimer;
-	public bool isCountingDown = false;
-
-	public void setFire()
-	{
-		if (isCountingDown = false)
-		{
-			isCountingDown = true;
-			effectTimer = Random.Range(1.0f, 5.0f);
-			statusFire = true;
-			fireEffect.SetActive(true);
-			
-			effectTimer -= Time.deltaTime;
-			
-			isCountingDown = false;
-			statusFire = false;
-			fireEffect.SetActive(false);
-		}
-	}
-	
-	public void setIce()
-	{
-		if (isCountingDown = false)
-		{
-			isCountingDown = true;
-			effectTimer = Random.Range(1.0f, 5.0f);
-			statusIce = true;
-			iceEffect.SetActive(true);
-			
-			effectTimer -= Time.deltaTime;
-			
-			isCountingDown = false;
-			statusIce = false;
-			iceEffect.SetActive(false);
-		}
-	}
-	
-	public void setConfusion()
-	{
-		if (isCountingDown = false)
-		{
-			isCountingDown = true;
-			effectTimer = Random.Range(1.0f, 5.0f);
-			statusConfusion = true;
-			confusionEffect.SetActive(true);
-			
-			effectTimer -= Time.deltaTime;
-			
-			isCountingDown = false;
-			statusConfusion = false;
-			confusionEffect.SetActive(false);
-		}
-	}
-
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>(); 
@@ -123,12 +65,6 @@ public class CharCont : MonoBehaviour
 		{
 			if (collision.gameObject.CompareTag("Enemy"))
 			{
-				if (SceneManager.GetActiveScene().name == "Lava")
-					setFire();
-				if (SceneManager.GetActiveScene().name == "Ice")
-					setIce();
-				if (SceneManager.GetActiveScene().name == "Default")
-					setConfusion();
 				animator.SetBool("isHit", true);
 				playerHealth-=10;
 				Debug.Log(playerHealth);
