@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankEnemyController : Enemy, IDamageable {
-
+public class TankEnemyController : Enemy, IDamageable
+{
     public Transform raycast;
     public LayerMask raycastMask;
     public float raycastLength;
