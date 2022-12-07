@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: 0a50eefc5394e4e07889ff64a3562d76
-=======
-guid: fd6249116df23f142b7b9ef6f41a0cb0
->>>>>>> Stashed changes
+guid: aa1ff5c6c75334c4ab4bfd9449260033
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -46,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< Updated upstream
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,7 +76,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -109,29 +100,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tyrant_Head_0
+      name: fire effect 3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
+        x: 20
+        y: 207
+        width: 24
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba4b59dbeaac14994b0fe8b1e71af525
-      internalID: 1408849051
+      spriteID: d74feed418bfb9241b7dbdca8ee54fe6
+      internalID: 1212195421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_1
+      name: fire effect 3_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 64
-        height: 64
+        x: 81
+        y: 207
+        width: 27
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aef0baef006a481aba9af93bfebd18d
-      internalID: 1354465936
+      spriteID: 92de2795960583d48abbc1098f98a0f1
+      internalID: 1844860396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_2
+      name: fire effect 3_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
-        width: 64
-        height: 64
+        x: 145
+        y: 207
+        width: 27
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 989efde1be35e4e9790d230af4430a1a
-      internalID: 710598546
+      spriteID: 7ec136546913b9949b18cac4ff93c204
+      internalID: 1682499535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_3
+      name: fire effect 3_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 64
-        height: 64
+        x: 208
+        y: 207
+        width: 31
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f06ef3a7eca264e7eacfc01d911e4efd
-      internalID: 13694658
+      spriteID: 7d3bfaf35ac191c48ba952333f729bc3
+      internalID: -145387643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_4
+      name: fire effect 3_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
+        x: 16
+        y: 143
+        width: 31
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e66f0ef90da154249b6dd95bc43281a5
-      internalID: 842454535
+      spriteID: 1612bdf3c50045248896ecb6be0e3d99
+      internalID: -1475496806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_5
+      name: fire effect 3_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
+        x: 80
+        y: 143
+        width: 32
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9773d05c284f145a2abc4492c6797695
-      internalID: -1315295511
+      spriteID: 0ccb664e79df2d345bba8a738a70149f
+      internalID: -1358441106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_6
+      name: fire effect 3_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
+        x: 142
+        y: 143
+        width: 36
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe6998fdf53d444b19de088343c6f535
-      internalID: 1818885133
+      spriteID: ebbd4c537e319494d9df1777d854759d
+      internalID: -890770787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_7
+      name: fire effect 3_7
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 64
+        x: 206
+        y: 147
+        width: 36
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd004510789d414587fcf2ef9b98420
-      internalID: 1998461248
+      spriteID: 8e50f0a10ae89b742bf6fe4b2c747382
+      internalID: 1916085360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_8
+      name: fire effect 3_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
+        x: 13
+        y: 83
+        width: 38
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09ff21dc6e5e74acdb3c43ced785599c
-      internalID: -1903042214
+      spriteID: 9ba5fb16de7d6144aab95fe6323d3116
+      internalID: -1353774087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_9
+      name: fire effect 3_9
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 77
+        y: 93
+        width: 38
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,20 +307,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 818320c197f024156a550648c89b85f6
-      internalID: 1001020771
+      spriteID: 75f76c4ff5b249c4f9c7c346595b5a6d
+      internalID: 251596650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_10
+      name: fire effect 3_10
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 141
+        y: 100
+        width: 38
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +328,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82057952585d1445a88dff5a61452510
-      internalID: 1315927889
+      spriteID: 2c33ac6f364e34c4abcb180e89873fcc
+      internalID: -1043133237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_11
+      name: fire effect 3_11
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
+        x: 204
+        y: 111
+        width: 40
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4f167519fd124f9187fade8c9e242ae
-      internalID: 1244244038
+      spriteID: 9e34498440059f94dafcaa2d3832e39f
+      internalID: -1563133965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tyrant_Head_12
+      name: fire effect 3_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 20
+        y: 53
+        width: 24
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,17 +370,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bed6456614aa944df9e006b1877cf351
-      internalID: -328270643
+      spriteID: 1c7be51541566f647a15d31de2e12d66
+      internalID: -901343980
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
->>>>>>> Stashed changes
     outline: []
     physicsShape: []
     bones: []
@@ -412,24 +386,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< Updated upstream
     nameFileIdTable:
-      Tyrant_Head_3: 13694658
-      Tyrant_Head_2: 710598546
-      Tyrant_Head_4: 842454535
-      Tyrant_Head_9: 1001020771
-      Tyrant_Head_8: -1903042214
-      Tyrant_Head_1: 1354465936
-      Tyrant_Head_11: 1244244038
-      Tyrant_Head_5: -1315295511
-      Tyrant_Head_0: 1408849051
-      Tyrant_Head_7: 1998461248
-      Tyrant_Head_12: -328270643
-      Tyrant_Head_6: 1818885133
-      Tyrant_Head_10: 1315927889
-=======
-    nameFileIdTable: {}
->>>>>>> Stashed changes
+      fire effect 3_7: 1916085360
+      fire effect 3_8: -1353774087
+      fire effect 3_1: 1844860396
+      fire effect 3_5: -1358441106
+      fire effect 3_11: -1563133965
+      fire effect 3_2: 1682499535
+      fire effect 3_10: -1043133237
+      fire effect 3_4: -1475496806
+      fire effect 3_3: -145387643
+      fire effect 3_9: 251596650
+      fire effect 3_6: -890770787
+      fire effect 3_0: 1212195421
+      fire effect 3_12: -901343980
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
