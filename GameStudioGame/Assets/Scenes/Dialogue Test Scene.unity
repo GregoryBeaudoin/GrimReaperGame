@@ -3122,36 +3122,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Soul
   sentences:
-  - "We almost got eaten! What do you\r mean not bad!?\r"
+  - 'We almost got eaten! What do you
+
+    mean not bad!?'
   - "That doesn\u2019t make this any better!"
   - Alright, here it goes.
   - You!
   - "You owe me several explanations!\r"
-  - "Why you\u2019ve been dragging me from\r place to place all over this god\r forsaken
-    realm looking for\r fragments that I never wanted!\r"
-  - "Oh, and another thing! All this\r time we\u2019ve been fighting and\r destroying
-    husks all around here!\r You couldn\u2019t be bothered to help\r them before
-    they turned!?\r"
-  - "You\u2019re one all-powerful, godly being\r capable of judging lost souls and\r
-    sending them to salvation or\r damnation! So why help me!? What\r could possibly
-    be so special about\r me!?"
-  - "So!? You still need to help them!\r They deserve that much! They\r shouldn\u2019t
-    have to wander this\r wasteland eternally as cold\r mindless husks!"
+  - "Why you\u2019ve been dragging me from\r\nplace to place all over this god\r\nforsaken
+    realm looking for\r\nfragments that I never wanted!"
+  - "Oh, and another thing! All this\r\ntime we\u2019ve been fighting and\r\ndestroying
+    husks all around here!\r\nYou couldn\u2019t be bothered to help\r\nthem before
+    they turned!?"
+  - "You\u2019re one all-powerful, godly being\r\ncapable of judging lost souls and\r\nsending
+    them to salvation or\r\ndamnation! So why help me!? What\r\ncould possibly be
+    so special about\r\nme!?\r"
+  - "So!? You still need to help them!\r\nThey deserve that much! They\r\nshouldn\u2019t
+    have to wander this\r\nwasteland eternally as cold\r\nmindless husks!"
   - "And another thing-wait, I\u2019m right?"
   - An offer? What kind of offer?
   - "What are you saying?\r"
   - To do what?
-  - "W-what could I do? I\u2019m just one\r person.\r"
+  - "W-what could I do? I\u2019m just one\r\nperson."
   - "But I\u2019m just a person-"
   - "I had my chance, I failed!\r"
   - "You\u2019re not kidding, right?"
-  - "So you really think I can make a\r difference?"
+  - "So you really think I can make a\r\ndifference?\r"
   - "Well, I guess I\u2019ll try then.\r"
   - So... how am I getting back?
   - Ow! Damnit that hurt.
   - "So, this is it?\r"
-  - "Wait! I haven\u2019t guessed your name\r yet! Azesoth! Bealzibub! Meletot!\r
-    Gunthren! Abraham! Lucifer!\r Constantine! Rafael! George!\r"
+  - "Wait! I haven\u2019t guessed your name\r\nyet! Azesoth! Bealzibub! Meletot!\r\nGunthren!
+    Abraham! Lucifer!\r\nConstantine! Rafael! George!\r"
   - Oh you son of a-
 --- !u!114 &168732003
 MonoBehaviour:
@@ -4350,34 +4352,46 @@ MonoBehaviour:
   sentences:
   - Huh, not bad.
   - "Hey, hey, hey-YOU almost got eaten.\r"
-  - "Well, I tried. Now before you turn\r into a husk you should grab that.\r"
+  - 'Well, I tried. Now before you turn
+
+    into a husk, you should grab that.'
   - 'Me? '
   - 'About? '
   - Well-
   - "It\u2019s not that easy. I\u2019m one-"
-  - "Because you genuinely want to help\r people. I usually don\u2019t see that\r
-    down here. When people die, they\r care about where they end up. Not\r where
-    others end up. That\u2019s what's\r so special about you.\r"
+  - "Because you genuinely want to help\r\npeople. I usually don\u2019t see that\r\ndown
+    here. When people die, they\r\ncare about where they end up. Not\r\nwhere others
+    end up. That\u2019s what's\r\nso special about you.\r"
   - 'You''re right. '
-  - "Yup, hit the nail right on the head\r kid. That\u2019s why I\u2019d like to
-    make\r you an offer."
-  - "I\u2019ve grown numb, unphased, and used\r to the horrifying sights down here.\r
-    That\u2019s why they need someone like\r you, in life, to help them through\r
-    their struggles and hardship up\r there.\r"
-  - "I\u2019m asking if you\u2019d like to be sent\r back."
-  - "What you\u2019ve done all along: help\r people.\r"
-  - "You think I can make a difference\r alone down here? Imagine what you\r could
-    do up there.\r"
+  - "Yup, hit the nail right on the head\r\nkid. That\u2019s why I\u2019d like to
+    make\r\nyou an offer.\r"
+  - "I\u2019ve grown numb, unphased, and used\r\nto the horrifying sights down here.\r\nThat\u2019s
+    why they need someone like\r\nyou, in life, to help them through\r\ntheir struggles
+    and hardship up\r\nthere.\r"
+  - "I\u2019m asking if you\u2019d like to be sent\r\nback."
+  - "What you\u2019ve done all along. Help\r\npeople.\r"
+  - 'You think I can make a difference
+
+    alone down here? Imagine what you
+
+    could
+    do up there.'
   - One person is all it takes!
-  - "I\u2019ve had countless chances, and\r failed countless times! "
-  - "But I somehow managed to succeed\r with you!\r"
+  - "I\u2019ve had countless chances, and\r\nfailed countless times! \r"
+  - 'But I somehow managed to succeed
+
+    with you!'
   - "Do I ever kid, kid?\r"
   - I know you can.
   - "I\u2019m glad to hear it."
   - Oh, like this.
   - "Yup. See you in the end kid.\r"
-  - "Oh buddy, you guessed it a while\r ago.\r"
-  - "Good luck kid... Well, time to pick\r up the pieces.\r"
+  - 'Oh buddy, you guessed it a while
+
+    ago.'
+  - 'Good luck kid... Well, time to pick
+
+    up the pieces.'
 --- !u!114 &243014949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8134,12 +8148,18 @@ MonoBehaviour:
   title: Reaper
   sentences:
   - "Oh, this makes sense now.\r"
-  - "We just wandered into the Soul\r Speculum. In basic terms, this is\r where all
-    repressed emotions\r reside. And by the looks of it..."
-  - "This is where your anger ended up\r along with most other people's\r anger.
-    It\u2019s not a very popular\r emotion."
-  - "Can\u2019t leave yet. The Speculum traps\r all that enter. You\u2019ve gotta
-    break\r out or get consumed. "
+  - 'We just wandered into the Soul
+
+    Speculum. In basic terms, this is
+
+    where
+    all repressed emotions
+
+    reside. And by the looks of it...'
+  - "This is where your anger ended up\r\nalong with most other people's\r\nanger.
+    It\u2019s not a very popular\r\nemotion.\r"
+  - "Can\u2019t leave yet. The Speculum traps\r\nall that enter. You\u2019ve gotta
+    break\r\nout or get consumed. \r"
   - Yes, it will eat you.
   - "Glad you came around.\r"
   - Huh, pretty close actually.
@@ -8306,11 +8326,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Soul
   sentences:
+  - "What the hell is that?!\r"
   - What part of this makes sense?!
-  - "Y\u2019know, I\u2019m good. We can just\r leave.\r"
+  - "Y\u2019know, I\u2019m good. We can just\r\nleave."
   - "So, by consumed you mean...\r"
   - "Guess we\u2019ve gotta break out then."
-  - "I\u2019ll stick with Azreal over\r whatever that thing is.\r"
+  - "I\u2019ll stick with Azreal over\r\nwhatever that thing is.\r"
   - "Wait! Was I really close!?\r"
 --- !u!114 &511616747
 MonoBehaviour:

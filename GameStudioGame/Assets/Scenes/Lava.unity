@@ -337,9 +337,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - "Yes but no. It\u2019s all the same\r place, but the way souls suffer\r changes
+  - "Yes but no. It\u2019s all the same\r\nplace, but the way souls suffer\r\nchanges
     the landscape.\r"
-  - "Quit your moping, we\u2019ve got Husks\r incoming."
+  - "Quit your moping, we\u2019ve got Husks\r\nincoming."
 --- !u!114 &170304606
 MonoBehaviour:
   m_ObjectHideFlags: 0

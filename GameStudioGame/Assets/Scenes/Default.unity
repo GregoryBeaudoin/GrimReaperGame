@@ -905,13 +905,23 @@ MonoBehaviour:
   title: Reaper
   sentences:
   - Ok first question. How did you die?
-  - "Of course not. Look, I need to know\r what kind of person you were, that\r way
-    we know exactly what we\u2019re\r looking for.\r"
-  - "Were you an angry person, a sad\r person, a scared person, just give\r me something.\r"
-  - "Finally, I have something to go on.\r What made you happy?\r"
-  - "Look this isn\u2019t a beauty pageant\r kid, I need details.\r"
-  - "I\u2019m thousands of years old.\r Everyone that comes through here is\r a kid
-    to me. I also remember\r telling you not to answer my\r questions with questions.\r"
+  - "Of course not. Look, I need to know\r\nwhat kind of person you were, that\r\nway
+    we know exactly what we\u2019re\r\nlooking for.\r"
+  - 'Were you an angry person, a sad
+
+    person, a scared person, just give
+
+    me
+    something.'
+  - 'Finally, I have something to go on.
+
+    What made you happy?'
+  - "Look this isn\u2019t a beauty pageant\r\nkid, I need details.\r"
+  - "I\u2019m thousands of years old.\r\nEveryone that comes through here is\r\na
+    kid to me."
+  - 'I also remember telling you not to
+
+    answer my questions with questions.'
   - Was the bowl made of gold?
   - "Oh. I see, I think I know where to\r go."
 --- !u!114 &539156293
@@ -3851,15 +3861,31 @@ MonoBehaviour:
   sentences:
   - 'I don''t remember. '
   - 'Well, what do you wanna know? '
-  - "I remember all those emotions, but\r more than anything, I remember being\r
-    happy.\r"
-  - "Well, I was happiest when helping\r others.\r"
-  - "How do you know I\u2019m a kid? For all\r you know I could be fifty or thirty\r
-    or"
-  - "Oh sorry. As for being happy it..\r It was when I gave her a bowl of\r rice."
-  - "No, it was a girl I saw outside my\r tent. She was... Crying and hungry,\r I
-    went inside and gave her a bowl\r of rice and her face lit up. She\r thanked
-    me and went to play with\r the other children.\r"
+  - 'I remember all those emotions but
+
+    more than anything I remember being
+
+    happy.'
+  - "Well I was happiest when helping\r\nothers.\r"
+  - "How do you know I\u2019m a kid? For all\r\nyou know I could be fifty or thirty\r\nor-"
+  - 'Oh sorry. As for being happy it..
+
+    It was when I gave her a bowl of
+
+    rice.'
+  - 'No, it was a girl I saw outside my
+
+    tent. She was... Crying and hungry,
+
+    I
+    went inside and gave her a bowl
+
+    of rice and her face lit up. She
+
+    thanked
+    me and went to play with
+
+    the other children.'
 --- !u!114 &1898726910
 MonoBehaviour:
   m_ObjectHideFlags: 0

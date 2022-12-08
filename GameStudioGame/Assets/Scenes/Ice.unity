@@ -3400,13 +3400,15 @@ MonoBehaviour:
   - 'No. '
   - "It\u2019s always winter."
   - Stop. Just please stop.
-  - "(Annoyed) I told you not to call me\r that.\r"
+  - '(Annoyed) I told you not to call me
+
+    that.'
   - Anything else.
-  - "(Confused) What? How\u2019d you come up\r with that?"
-  - "I told you. I\u2019m. Not. Santa Clause.\r I deliver souls to hell, not\r presents
-    to kids.\r"
-  - "I have one, but you don\u2019t need to\r know it.\r"
-  - "Guess all you want, but don\u2019t get\r distracted. There's enemies around.\r"
+  - "(Confused) What? How\u2019d you come up\r\nwith that?"
+  - "I told you. I\u2019m. Not. Santa Clause.\r\nI deliver souls to hell, not\r\npresents
+    to kids."
+  - "I have one, but you don\u2019t need to\r\nknow it.\r"
+  - "Guess all you want, but don\u2019t get\r\ndistracted. There's enemies around.\r"
 --- !u!114 &1922824847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3995,8 +3997,8 @@ MonoBehaviour:
   sentences:
   - 'Oh, is it Christmas? '
   - 'Oh, is it winter? '
-  - "Is this where you live? Are you\r Santa!? I promise I\u2019ve been good\r this
-    year!\r"
+  - "Is this where you live? Are you\r\nSanta!? I promise I\u2019ve been good\r\nthis
+    year!"
   - Will do, buddy!
   - Well, what should I call you?
   - "How about Nick?\r"

@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - "Damn, lots of husks. I may need\r some... Hey remember how you said\r you like
+  - "Damn lots of husks. I may need\r\nsome... Hey remember how you said\r\nyou like
     to help people?\r"
   - Yup. (Reaper grabs soul)
   - 'Press C to cast. '
@@ -2155,18 +2155,18 @@ MonoBehaviour:
   - 'No? '
   - "Touch\xE9."
   - I found it.
-  - "But I\u2019m dead? Can it really harm\r me?"
-  - "But it\u2019s shiny, it can\u2019t be all\r bad.\r"
+  - "But I\u2019m dead? Can it really harm\r\nme?"
+  - "But it\u2019s shiny, it can\u2019t be all\r\nbad."
   - "(Yells) Wonderful!\r"
-  - "Oh, I\u2019m sorry, but this feeling is\r just so fantastic! I just need to\r
-    feel this again! I\u2019m so sorry\r you\u2019re not feeling this too!"
-  - "Oh, I did this super great thing\r while we were overseas! We made\r schools,
-    bathrooms, houses, and\r gave them food! We even helped them\r with their harvest
-    festival at the\r end of fall! I remember grabbing\r some supplies. There were
-    some loud\r noises too. That party must\u2019ve been\r killer!\r"
-  - "Oh, where are we going? The beach?\r The slopes?"
+  - "Oh, I\u2019m sorry, but this feeling is\r\njust so fantastic! I just need to\r\nfeel
+    this again! I\u2019m so sorry\r\nyou\u2019re not feeling this too!\r"
+  - "Oh I did this super great thing\r\nwhile we were overseas! We made\r\nschools,
+    bathrooms, houses, and\r\ngave them food! We even helped them\r\nwith their harvest
+    festival at the\r\nend of fall! I remember grabbing\r\nsome supplies. There were
+    some loud\r\nnoises too. That party must\u2019ve been\r\nkiller!\r"
+  - "Oh where are we going? The beach?\r\nThe slopes?\r"
   - 'Are we there yet? '
-  - "(Laughs) I\u2019m just messin' with ya\r pal!\r"
+  - "(Laughs) I\u2019m just messin with ya\r\npal!"
 --- !u!114 &849020136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6434,21 +6434,29 @@ MonoBehaviour:
   sentences:
   - 'Soul Blast. '
   - You. You are a Soul Blast.
-  - "You\u2019re a pure soul, those were\r corrupted souls AKA Husks. And\r when
-    you come in contact with them,\r you damage and absorb their\r corruption. Thus
-    you help me get\r through by absorbing the husks.\r"
+  - "You\u2019re a pure soul, those were\r\ncorrupted souls AKA Husks. And\r\nwhen
+    you come in contact with them,\r\nyou damage and absorb their\r\ncorruption.
+    Thus you help me get\r\nthrough by absorbing the husks.\r"
   - 'Are you hurt? '
   - 'Then it''s safe. '
-  - "Now that we got that out of the\r way, let\u2019s get your fragment."
-  - "Great, just make sure not to touch\r it yet.\r"
-  - "Didn\u2019t I tell you not to go toward\r the light?"
+  - "Now that we got that out of the\r\nway, let\u2019s get your fragment.\r"
+  - 'Great, just make sure not to touch
+
+    it yet.'
+  - "Didn\u2019t I tell you not to go toward\r\nthe light?"
   - Yes, yes it can.
-  - "Fine, just don\u2019t say I didn\u2019t warn\r you."
+  - "Fine, just don\u2019t say I didn\u2019t warn\r\nyou."
   - So? How does it feel?
-  - "Good for you, but could you keep it\r down? There are enemies around\r here.\r"
-  - "Yeah I\u2019m DEFINITELY missing out.\r Now why don\u2019t you tell me something\r
-    else about your life so we can get\r you another fragment.\r"
-  - "I bet it was... I think I know\r where to go next.\r"
+  - 'Good for you, but could you keep it
+
+    down? There are enemies around
+
+    here.'
+  - "Yeah I\u2019m DEFINITELY missing out.\r\nNow why don\u2019t you tell me something\r\nelse
+    about your life so we can get\r\nyou another fragment.\r"
+  - 'I bet it was... I think I know
+
+    where to go next.'
   - "Uh... You\u2019ll see when we get there.\r"
   - (groans)
   - "I\u2019m not your pal."

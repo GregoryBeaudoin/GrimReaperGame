@@ -1804,19 +1804,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - "Now there it is. Don\u2019t rush, just\r go slowly. This kind of emotion is\r
-    tough to control.\r"
+  - "Now there it is. Don\u2019t rush, just\r\ngo slowly. This kind of emotion is\r\ntough
+    to control.\r"
   - (Sighs)
   - Everything ok?
   - "Calm down, it\u2019s ok. What\u2019s wrong?"
-  - "Yes, but the fire\u2019s not hurting\r anyone."
+  - "Yes, but the fire\u2019s not hurting\r\nanyone."
   - But it-
-  - "Snap out of it! It\u2019s over,\r they\u2019re gone!"
-  - "(Annoyed) Why... why am I trying so\r hard! Why is he running away!?"
-  - "(St. Nick... Floating with\r style... Dancing... Snowball\r fight... Davy...
-    ...HELPING) "
-  - "I\u2019m going to help him, I have to\r find him and make him whole again.\r
-    I have to...\r"
+  - "Snap out of it! It\u2019s over,\r\nthey\u2019re gone!\r"
+  - '(Annoyed) Why... why am I trying so
+
+    hard! Why is he running away!?'
+  - '(St. Nick... Floating with
+
+    style... Dancing... Snowball
+
+    fight...
+    Davy... ...HELPING) '
+  - "I\u2019m going to help him, I have to\r\nfind him and make him whole again.\r\nI
+    have to..."
 --- !u!114 &887916383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2849,21 +2855,23 @@ MonoBehaviour:
   - .................
   - I failed them.
   - But I left.
-  - "What good does some fresh water and\r a half pound of rice do when\r everyone's
-    dead? If I stayed, I\r could\u2019ve-"
-  - "I-I-may-but-I... I just wanted to\r say sorry. And I thought maybe\r they\u2019d
+  - "What good does some fresh water and\r\na half pound of rice do when\r\neveryone's
+    dead? If I stayed I\r\ncould\u2019ve-"
+  - "I-I-may-but-I... I just wanted to\r\nsay sorry. And I thought maybe\r\nthey\u2019d
     be down here.\r"
   - "(Sighs) I guess you\u2019re right.\r"
   - U-... Alright.
-  - "Oh mighty majesty, ruler of death,\r pray grace me with the knowledge of\r thou\u2019s
+  - "Oh mighty majesty, ruler of death,\r\npray grace me with the knowledge of\r\nthou\u2019s
     true title."
-  - "Figured if I praised you enough\r, you\u2019d tell me your real name?"
+  - "Figured if I praised you enough\r\nyou\u2019d tell me your real name?\r"
   - 'Yeah. '
   - "Well, then I\u2019ll just keep guessing.\r"
   - "Ok, I think I\u2019ve got it. Krampus."
-  - "Come on, I thought that one was\r pretty good."
-  - "Hey Luci, isn\u2019t it a little quiet? I mean, I know I\u2019ve only been here\r
-    a day, but this area seems too...\r quiet."
+  - 'Come on, I thought that one was
+
+    pretty good.'
+  - "Hey Luci, isn\u2019t it a little quiet?\nI mean, I know I\u2019ve only been
+    here\r\na day, but this area seems too...\r\nquiet.\r"
   - Really!?
   - 'Aw. '
 --- !u!114 &1158618810
@@ -3897,28 +3905,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - "(Panting) For somethin' so small you\r are so damn fast.\r"
-  - "Kid, lighten up. Doom and gloom\r doesn\u2019t suit you. "
-  - "Let\u2019s say for argument's sake you\r did. That doesn\u2019t change all the\r
-    good you did."
-  - "To take care of them, to bring them\r supplies."
-  - "Died with them?! Wiping out any\r good you did afterward!?"
-  - "Kid, there's no one left to\r apologize to down here. If there\r ever was, they
-    disappeared long ago."
-  - "Wouldn\u2019t have said it if I was\r wrong. Now, I\u2019ve got one more\r fragment
-    to find. Are you coming or\r not?"
+  - '(Panting) For somethin'' so small you
+
+    are so damn fast.'
+  - "Kid, lighten up. Doom and gloom\r\ndoesn\u2019t suit you."
+  - "Let\u2019s say for argument's sake you\r\ndid. That doesn\u2019t change all
+    the\r\ngood you did.\r"
+  - 'To take care of them, to bring them
+
+    supplies.'
+  - 'Died with them?! Wiping out any
+
+    good you did afterward!?'
+  - "Kid, there's no one left to\r\napologize to down here. If there\r\never was,
+    they disappeared long ago.\r"
+  - "Wouldn\u2019t had said it if I was\r\nwrong. Now, I\u2019ve got one more\r\nfragment
+    to find. Are you coming or\r\nnot?\r"
   - What... are you... doing?
-  - "You thought boot-licking would get\r you my name?\r"
-  - "Well, I\u2019m glad your emotions are\r balancing out, but flattery won\u2019t\r
-    work on me.\r"
-  - "Well, you\u2019ll keep being wrong. So\r let's not waste time.\r"
+  - 'You thought boot licking would get
+
+    you my name?'
+  - "Well, I\u2019m glad your emotions are\r\nbalancing out, but flattery won\u2019t\r\nwork
+    on me.\r"
+  - "Well, you\u2019ll keep being wrong. So\r\nlet's not waste time."
   - That was the worst one yet.
   - (Sighs) Fine.
   - "You\u2019re right."
   - About it being too quiet.
-  - "Come to think of it, we haven\u2019t\r seen any husks for a while. I mean,\r
-    I\u2019ve never been this far up, but\r still. There should be at least one\r
-    or two around here."
+  - "Come to think of it, we haven\u2019t\r\nseen any husks for a while. I mean,\r\nI\u2019ve
+    never been this far up, but\r\nstill. There should be at least one\r\nor two
+    around here.\r"
 --- !u!114 &1526736509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,13 +4272,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Soul
   sentences:
-  - "All-righty, Big G, here goes\r nothing.\r"
+  - 'All-righty, Big G, here goes
+
+    nothing.'
   - "I-i-it\u2019s all around us.\r"
-  - "T-t-th-the fire. I-i-it\u2019s\r everywhere.\r"
+  - "T-t-th-the fire. I-i-it\u2019s\r\neverywhere.\r"
   - "That\u2019s cause it already did.\r"
-  - "The kids, the parents, the\r volunteers, they\u2019re all gone! I\r couldn\u2019t
-    help them. I\r failed... I failed... I failed........"
-  - ...................................
+  - "The kids, the parents, the\r\nvolunteers, they\u2019re all gone! I\r\ncouldn\u2019t
+    help them. I\r\nfailed..."
+  - .......
 --- !u!114 &1679381255
 MonoBehaviour:
   m_ObjectHideFlags: 0

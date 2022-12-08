@@ -775,11 +775,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reaper
   sentences:
-  - "This is the Exodus. Souls wander\r eternally here, searching for\r something
-    they\u2019ve lost that they\r can never retrieve. It\u2019s an eternal\r suffering,
-    bearing the cold, for a\r chance that will never come to be."
+  - "This is the Exodus. Souls wander\r\neternally here, searching for\r\nsomething
+    they\u2019ve lost that they\r\ncan never retrieve. It\u2019s an eternal\r\nsuffering,
+    bearing the cold, for a\r\nchance that will never come to be."
   - "You don\u2019t have hands."
-  - "You know, I felt a little bad about\r throwing you at enemies. Not\r anymore.
+  - "You know, I felt a little bad about\r\nthrowing you at enemies. Not\r\nanymore.
     Now look alive!\r"
   - You know what I mean.
 --- !u!114 &454688898
@@ -1807,10 +1807,10 @@ MonoBehaviour:
   title: Soul
   sentences:
   - "(Dancing) Oh yeah, we did it, oh\r yeah."
-  - "I\u2019m dancing. Why aren\u2019t ya movin\u2019\r with me pal? Come on.\r"
+  - "I\u2019m dancing. Why aren\u2019t ya movin\u2019\r\nwith me pal? Come on."
   - "Well, where is the place for\r dancing?"
   - "Are you saying I\u2019m bad at dancing?\r"
-  - "Well, then I\u2019m floating with\r style.\r"
+  - "Well, then I\u2019m floating with\r\nstyle."
 --- !u!114 &987982779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4534,8 +4534,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Soul
   sentences:
-  - "Man fighting here\u2019s much more fun\r than that dreary old city.\r"
-  - "That doesn\u2019t mean we can\u2019t have a\r snowball fight!\r"
+  - "Man fighting here\u2019s much more fun\r\nthan that dreary old city.\r"
+  - "That doesn\u2019t mean we can\u2019t have a\r\nsnowball fight!"
   - '... Alright ya sack of bones. '
   - Will do, buddy!
   - "I thought I was dead?\r"
@@ -5924,8 +5924,8 @@ MonoBehaviour:
   - "What are you doing?\r"
   - "This is not the place for dancing.\r"
   - For you? Nowhere.
-  - "I\u2019m saying it\u2019s so bad, it\u2019s not\r even dancing.\r"
-  - "Fine, just float this way. We\u2019ve\r still gotta find more fragments.\r"
+  - "I\u2019m saying it\u2019s so bad, it\u2019s not\r\neven dancing."
+  - "Fine, just float this way. We\u2019ve\r\nstill gotta find more fragments."
 --- !u!114 &2115974668
 MonoBehaviour:
   m_ObjectHideFlags: 0
