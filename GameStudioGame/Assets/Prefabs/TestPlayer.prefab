@@ -707,6 +707,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   effectTimer: 0
+  randomChance: 0
   isCountingDown: 0
 --- !u!114 &4631431196663585670
 MonoBehaviour:
@@ -913,16 +914,16 @@ MonoBehaviour:
   health: 100
   numOfHearts: 10
   hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 275340253876251629, guid: 6c5c16412177ba047b01d4170b1ccd7f, type: 3}
+  - {fileID: 792448710948350144, guid: be8374296e35af044a8651ee797e2fff, type: 3}
+  - {fileID: 4355858605772202436, guid: 4c4d47104e86f814e92b303befbc9a19, type: 3}
+  - {fileID: 4967929430078652489, guid: a90383e441a6a9548afeb08b8a1d9058, type: 3}
+  - {fileID: 310927695497054788, guid: b76d1438dfea9d24fa6e412bd6bf348d, type: 3}
+  - {fileID: 7353192511368600505, guid: 25c421841c6c45741975e7000491b170, type: 3}
+  - {fileID: 5742719031051999983, guid: 2cd32d58284459148b9d094d9aa06dbe, type: 3}
+  - {fileID: 3189103901765938766, guid: 118fbff58cc28f641a9f2bc220f35962, type: 3}
+  - {fileID: 2040513041792070227, guid: 482e1edef527c6c4db7727cd565f8f67, type: 3}
+  - {fileID: 384184924801449350, guid: 7c6e443493344b04e81f952f41e6edc9, type: 3}
   fullHeart: {fileID: 21300000, guid: 607fbfc282ef5a942add2e41617a9e4b, type: 3}
   emptyHeart: {fileID: 21300000, guid: 6650ed091921c5045958f1a09eb6a9cd, type: 3}
 --- !u!1 &4631431196702631883
