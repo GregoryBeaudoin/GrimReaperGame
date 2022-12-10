@@ -29,6 +29,7 @@ public class FlyingEnemyController : Enemy, IDamageable
 	
 	public void Dead()
 	{
+		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth +=10;
 		Destroy(gameObject);
 	}
 	

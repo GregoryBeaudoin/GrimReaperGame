@@ -100,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
         //Dash
         if (Input.GetButtonDown("Dash"))
         {
+			GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth -=5;
             dashBufferCounter = dashBufferLength;
             animator.SetBool("isDashing", true);
             audioSource.clip = dashingAudioClip;
@@ -114,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
         //Cast
         if (Input.GetButtonDown("Cast"))
         {
+			GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth -=4;
             if (controller.isFacingRight)
             {
                 animator.SetBool("isCasting", true);

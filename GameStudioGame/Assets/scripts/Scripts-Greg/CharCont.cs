@@ -167,11 +167,20 @@ public class CharCont : MonoBehaviour
 		if (playerHealth <= 0)
         {
             animator.SetBool("isDead", true);
-            
         }
 			
             
     }
+	
+	
+	
+	public void gameOver()
+	{
+		Scene level = SceneManager.GetActiveScene();
+        int currentLevel = level.buildIndex;
+		PlayerPrefs.SetInt("level", currentLevel);
+		SceneManager.LoadScene("GameOver");	
+	}
 
     public void RestartScene()
     {
