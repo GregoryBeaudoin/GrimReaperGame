@@ -175,6 +175,10 @@ MonoBehaviour:
   lineOfSight: 4
   shootingRange: 3
   firingRate: 1
+  attackAudioClip: {fileID: 8300000, guid: a0a5264d66a232d4f9e7c3ac377f0efd, type: 3}
+  hitAudioClip: {fileID: 8300000, guid: 4bcd9d19a86ec884ea7b8e4d95fc7554, type: 3}
+  deathAudioClip: {fileID: 8300000, guid: e27476f242fa1624083d5458f5531bb3, type: 3}
+  audioSource: {fileID: -8421753605324708027, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
   bullet: {fileID: 3185640009858419412, guid: 2e31eb655e3854b7fac5f980bea2dec7, type: 3}
   bulletParent: {fileID: 5476578570247863614}
   animator: {fileID: 5476578571728382741}

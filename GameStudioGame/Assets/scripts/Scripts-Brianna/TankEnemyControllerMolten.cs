@@ -19,11 +19,20 @@ public class TankEnemyControllerMolten : Enemy, IDamageable
     private bool inRange;
     private bool isCooling;
     private float intTimer;
-
+	
+	public AudioClip attackAudioClip;
+	public AudioClip hitAudioClip;
+	public AudioClip deathAudioClip;
+	public AudioSource audioSource;
+	
     public int Health {get; set; }
     
     public void Damage()
 	{
+		audioSource.clip = hitAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		
 		Health++;
 		
         knockback();
@@ -35,6 +44,9 @@ public class TankEnemyControllerMolten : Enemy, IDamageable
 
     public void Dead()
 	{
+		audioSource.clip = deathAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
 		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth +=10;
 		Destroy(gameObject);
 	}
@@ -129,6 +141,10 @@ public class TankEnemyControllerMolten : Enemy, IDamageable
 
     void Attack()
     {
+		audioSource.clip = attackAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		
         timer = intTimer; 
         attackMode = true; 
 
