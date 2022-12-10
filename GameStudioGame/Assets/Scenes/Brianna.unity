@@ -1036,7 +1036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631431196663585667, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.94
+      value: 25.1
       objectReference: {fileID: 0}
     - target: {fileID: 4631431196663585667, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2041,8 +2041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
-  speed: 1
-  diveSpeed: 2
+  diveSpeed: 5
   positions:
   - {x: 41, y: 10, z: 0}
   - {x: 20, y: 10, z: 0}
@@ -2054,6 +2053,7 @@ MonoBehaviour:
   - {x: 26, y: 0.5, z: 0}
   - {x: 24, y: 4, z: 0}
   - {x: 21, y: 10, z: 0}
+  projectile: {fileID: 3234503990147083527, guid: 2f488af5f9fab448b886a9db6e2ba613, type: 3}
 --- !u!1 &840330298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,7 +3104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269897537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.67, y: 4.8, z: -10}
+  m_LocalPosition: {x: 30.37, y: 4.8, z: -10}
   m_LocalScale: {x: 3.075, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

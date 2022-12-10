@@ -48,19 +48,25 @@ public class FinalBossEnemyController : Enemy, IDamageable
     [SerializeField] private Vector3[] positions;
     [SerializeField] private Vector3[] divePositions;
     private int index;
-    private bool isMoving;
+    private bool isMoving = false;
 
     // Update is called once per frame
     void Update()
     {
+        /* for (int j = 0; j < 5; j++)
+        {
+            StartCoroutine(Stages());
+        } */
+        //Split();
         StartCoroutine(Stages());
-        Split();
     }
 
     void Move()
     {
+        Debug.Log("hello");
+
         isMoving = true;
-        speed = 2f;
+        speed = 1f;
 
         transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
         
@@ -80,8 +86,10 @@ public class FinalBossEnemyController : Enemy, IDamageable
 
     void Dive()
     {
+        Debug.Log("sdkfjgldsfjg");
+
         isMoving = false;
-        speed = 5f;
+        speed = 2f;
 
         transform.position = Vector2.MoveTowards(transform.position, divePositions[index], Time.deltaTime * diveSpeed);
         
@@ -102,25 +110,28 @@ public class FinalBossEnemyController : Enemy, IDamageable
 
     void Split()
     {
-        if (isMoving == true)
+        /* if (isMoving == true)
         {
             Debug.Log("hello");
             Instantiate(projectile);
         }
         else if (isMoving == false)
         {
-            Debug.Log("boooooooo");
-        }
+            Debug.Log("bye");
+        } */
     }
 
     IEnumerator Stages()
     {
-        while ()
-        Move();
-        
-        yield return new WaitForSeconds(5);
-        Debug.Log("time's up");
-        
         Dive();
+
+        yield return new WaitForSeconds(5);
+
+        for (int i = 0; i < 5; i++)
+        {
+            Debug.Log(i);
+
+            Move();
+        }
     }
 }
