@@ -10665,6 +10665,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[9]
       value: 
       objectReference: {fileID: 769088061}
+    - target: {fileID: 1082462174, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4631431196663585667, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: m_RootOrder
       value: 0
