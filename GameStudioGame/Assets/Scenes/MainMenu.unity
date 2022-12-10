@@ -1544,6 +1544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolumeSlider: {fileID: 88139551}
   effectsVolumeSlider: {fileID: 1541839096}
+  mixer: {fileID: 24100000, guid: 1f00a0be975fcdb439e40538fa926c63, type: 2}
 --- !u!1 &1089662648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,7 +1886,7 @@ AudioSource:
   m_GameObject: {fileID: 1402715618}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8844092089091005853, guid: 1f00a0be975fcdb439e40538fa926c63, type: 2}
   m_audioClip: {fileID: 8300000, guid: 97720d48b54c5db438c29a67a77e4ec2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

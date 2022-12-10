@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
             animator.SetBool("isJumping", true);
             audioSource.clip = flyingAudioClip;
+			audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
             audioSource.Play(); 
         }
         else if (controller.isGrounded == false)
@@ -90,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isAttacking", true);
             audioSource.clip = slashingAudioClip;
+			audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
             audioSource.Play(); 
         }
 		else
@@ -104,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
             dashBufferCounter = dashBufferLength;
             animator.SetBool("isDashing", true);
             audioSource.clip = dashingAudioClip;
+			audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
             audioSource.Play(); 
         }
         else
@@ -120,6 +123,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isCasting", true);
                 audioSource.clip = castingAudioClip;
+				audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
                 audioSource.Play(); 
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
@@ -135,6 +139,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isCasting", true);
                 audioSource.clip = castingAudioClip;
+				audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
                 audioSource.Play(); 
                 GameObject soul = Instantiate(projectile, transform.position, Quaternion.identity);
                 soul.GetComponent<SpriteRenderer>().flipX = false; 
