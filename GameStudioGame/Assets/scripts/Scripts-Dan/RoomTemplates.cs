@@ -17,6 +17,7 @@ public class RoomTemplates : MonoBehaviour {
 	private bool spawnedBoss;
 	public GameObject boss;
 	public GameObject powerUp;
+	
 
 	void Update(){
 

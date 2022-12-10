@@ -159,7 +159,7 @@ MonoBehaviour:
   lineOfSight: 5
   pounceHeight: 3
   player: {fileID: 0}
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 7818814516700017316}
   groundLayer:
     serializedVersion: 2
     m_Bits: 23
