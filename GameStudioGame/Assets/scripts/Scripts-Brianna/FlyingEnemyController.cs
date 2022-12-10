@@ -11,8 +11,17 @@ public class FlyingEnemyController : Enemy, IDamageable
     public float firingRate = 1f;
     private float fireTime;
 
+	public AudioClip attackAudioClip;
+	public AudioClip hitAudioClip;
+	public AudioClip deathAudioClip;
+	public AudioSource audioSource;
+
 	public void Damage()
 	{
+		audioSource.clip = hitAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		
 		Health++;
 
 		if (GameObject.Find("TestPlayer").GetComponent<PlayerMovement>().isStronger == true)
@@ -29,6 +38,9 @@ public class FlyingEnemyController : Enemy, IDamageable
 	
 	public void Dead()
 	{
+		audioSource.clip = deathAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
 		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth +=10;
 		Destroy(gameObject);
 	}
@@ -59,11 +71,17 @@ public class FlyingEnemyController : Enemy, IDamageable
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 			if (distanceFromPlayer < lineOfSight && distanceFromPlayer > shootingRange)
 			{
+				audioSource.clip = attackAudioClip;
+				audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+				audioSource.Play();
 				transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
 				animator.SetBool("isAttacking", true);
 			}
 			else if (distanceFromPlayer <= shootingRange && fireTime < Time.time)
 			{
+				audioSource.clip = attackAudioClip;
+				audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+				audioSource.Play();
 				Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
 				fireTime = Time.time + firingRate;
 				animator.SetBool("isAttacking", true);
