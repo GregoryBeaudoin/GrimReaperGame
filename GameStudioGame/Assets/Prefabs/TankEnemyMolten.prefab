@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4755583181322276118}
   - component: {fileID: 4755583181322276119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TriggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -67,7 +67,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4755583181826398902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 4755583182786446739}
   - component: {fileID: 4755583182786446737}
   - component: {fileID: 4755583182786446744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankEnemyMolten
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4755583183049301277}
   - component: {fileID: 4755583183049301278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -342,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4755583183097830147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 8042214256675435761}
   - component: {fileID: 8042214256675435766}
   - component: {fileID: 8042214256675435767}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FlyingEnemyFrost
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8042214256875650135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
