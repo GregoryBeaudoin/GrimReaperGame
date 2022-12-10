@@ -42,18 +42,26 @@ public class FinalBossEnemyController : Enemy, IDamageable
 			
     }
 
-    [SerializeField] public float speed;
+    //[SerializeField] public float speed;
+    private float speed;
+    [SerializeField] public float diveSpeed;
     [SerializeField] private Vector3[] positions;
+    [SerializeField] private Vector3[] divePositions;
     private int index;
+    private bool isMoving;
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        StartCoroutine(Stages());
+        Split();
     }
 
     void Move()
     {
+        isMoving = true;
+        speed = 2f;
+
         transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
         
         if (transform.position == positions[index])
@@ -67,5 +75,52 @@ public class FinalBossEnemyController : Enemy, IDamageable
                 index++;
             }
         }
+    }
+
+
+    void Dive()
+    {
+        isMoving = false;
+        speed = 5f;
+
+        transform.position = Vector2.MoveTowards(transform.position, divePositions[index], Time.deltaTime * diveSpeed);
+        
+        if (transform.position == divePositions[index])
+        {
+            if (index == divePositions.Length -1)
+            {
+                index = 0;
+            }
+            else
+            {
+                index++;
+            }
+        }
+    }
+
+    [SerializeField] GameObject projectile;
+
+    void Split()
+    {
+        if (isMoving == true)
+        {
+            Debug.Log("hello");
+            Instantiate(projectile);
+        }
+        else if (isMoving == false)
+        {
+            Debug.Log("boooooooo");
+        }
+    }
+
+    IEnumerator Stages()
+    {
+        while ()
+        Move();
+        
+        yield return new WaitForSeconds(5);
+        Debug.Log("time's up");
+        
+        Dive();
     }
 }
