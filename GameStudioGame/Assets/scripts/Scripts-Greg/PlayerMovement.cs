@@ -202,6 +202,7 @@ public class PlayerMovement : MonoBehaviour
             isExplosive = true;
             projectile = thirdProjectile;
             Destroy(thirdFragment); 
+            LoadNextScene(); 
         }
 
         else if (collision.gameObject.name == "AttackUpgrade")
@@ -210,6 +211,7 @@ public class PlayerMovement : MonoBehaviour
             isStronger = true;
             projectile = fourthProjectile;
             Destroy(fourthFragment); 
+            LoadNextScene(); 
         }
     }
 
