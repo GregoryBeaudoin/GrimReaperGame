@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5c8d6095fca44a8b852e987eb7b2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 0
   speed: 3
   lineOfSight: 5
   pounceHeight: 3
@@ -169,6 +169,7 @@ MonoBehaviour:
   hitAudioClip: {fileID: 8300000, guid: 4bcd9d19a86ec884ea7b8e4d95fc7554, type: 3}
   deathAudioClip: {fileID: 8300000, guid: e27476f242fa1624083d5458f5531bb3, type: 3}
   audioSource: {fileID: -8421753605324708027, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+  wait: 3000
 --- !u!114 &7818814517099991907
 MonoBehaviour:
   m_ObjectHideFlags: 0

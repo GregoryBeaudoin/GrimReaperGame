@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d698147fb6acb4850a8ed9d788d80e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 7
+  health: 0
   raycast: {fileID: 3219804678107429887}
   raycastMask:
     serializedVersion: 2
@@ -176,6 +176,7 @@ MonoBehaviour:
   hitAudioClip: {fileID: 8300000, guid: 4bcd9d19a86ec884ea7b8e4d95fc7554, type: 3}
   deathAudioClip: {fileID: 8300000, guid: e27476f242fa1624083d5458f5531bb3, type: 3}
   audioSource: {fileID: -8421753605324708027, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+  wait: 3000
 --- !u!114 &3219804677947806571
 MonoBehaviour:
   m_ObjectHideFlags: 0
