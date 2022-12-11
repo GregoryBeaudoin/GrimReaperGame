@@ -2667,6 +2667,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381675002}
   m_CullTransparentMesh: 1
+--- !u!1001 &1385791685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9098397763952347925, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_Name
+      value: ExplosiveSoulUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 93.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098397763952347927, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+--- !u!1 &1385791686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9098397763952347925, guid: 73c9cf6fd79d5cb43bcf232dd2091d0c, type: 3}
+  m_PrefabInstance: {fileID: 1385791685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1428273247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,8 +3169,8 @@ MonoBehaviour:
   closedRoom: {fileID: 1586528034238900, guid: 7d2f3bfc6bab58b4fab0caf60482a350, type: 3}
   rooms: []
   waitTime: 2
-  boss: {fileID: 1898445321837384, guid: 09e14c596e782a742829f1166838514d, type: 3}
-  powerUp: {fileID: 0}
+  boss: {fileID: 4333138129092984304, guid: 9f0072d36ea90414caac5c464e38618f, type: 3}
+  powerUp: {fileID: 1385791686}
 --- !u!1 &1567669917
 GameObject:
   m_ObjectHideFlags: 0
