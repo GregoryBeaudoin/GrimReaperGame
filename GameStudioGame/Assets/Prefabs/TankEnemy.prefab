@@ -171,6 +171,10 @@ MonoBehaviour:
   attackRange: 6
   speed: 2
   timer: 1
+  attackAudioClip: {fileID: 8300000, guid: bf025223a9bcd904a93d91401fe07a6c, type: 3}
+  hitAudioClip: {fileID: 8300000, guid: 4bcd9d19a86ec884ea7b8e4d95fc7554, type: 3}
+  deathAudioClip: {fileID: 8300000, guid: e27476f242fa1624083d5458f5531bb3, type: 3}
+  audioSource: {fileID: -8421753605324708027, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
 --- !u!114 &8423882122558685551
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,11 +19,22 @@ public class TankEnemyControllerFrost : Enemy, IDamageable
     private bool inRange;
     private bool isCooling;
     private float intTimer;
+	
+	public AudioClip attackAudioClip;
+	public AudioClip hitAudioClip;
+	public AudioClip deathAudioClip;
+	public AudioSource audioSource;
+	
+	public float wait = 3000f;
 
     public int Health {get; set; }
     
     public void Damage()
 	{
+		audioSource.clip = hitAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		
 		Health++;
 		
         knockback();
@@ -35,6 +46,10 @@ public class TankEnemyControllerFrost : Enemy, IDamageable
 
     public void Dead()
 	{
+		audioSource.clip = deathAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth +=10;
 		Destroy(gameObject);
 	}
 	
@@ -76,12 +91,16 @@ public class TankEnemyControllerFrost : Enemy, IDamageable
         {
             inRange = false;
         }
+	
 
         if(inRange == false)
         {
             animator.SetBool("isWalking", true);
             StopAttack();
         }
+		
+		EnemyLogic();
+		//Debug.Log(hit.collider);
 	}
 
     void OnTriggerEnter2D(Collider2D trig)
@@ -93,7 +112,7 @@ public class TankEnemyControllerFrost : Enemy, IDamageable
             Flip();
         }
     }
-
+	
     void EnemyLogic()
     {
         distance = Vector2.Distance(transform.position, target.position);
@@ -102,7 +121,7 @@ public class TankEnemyControllerFrost : Enemy, IDamageable
         {
             StopAttack();
         }
-        else if(attackRange >= distance && isCooling == false)
+        else if((attackRange >= distance) && (isCooling == false))
         {
             Attack();
         }
@@ -128,13 +147,30 @@ public class TankEnemyControllerFrost : Enemy, IDamageable
 
     void Attack()
     {
+		audioSource.clip = attackAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		
+		
+		wait -= 1;
+		
+		if (wait <= 0)
+		{
+		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth -= 5f;
+		Debug.Log(GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth);
+		wait = 3000f;
+		}
+		
         timer = intTimer; 
         attackMode = true; 
 
+		
+		
         animator.SetBool("isWalking", false);
         animator.SetBool("isAttacking", true);
     }
-
+	
+	
     void Cooldown()
     {
         timer -= Time.deltaTime;

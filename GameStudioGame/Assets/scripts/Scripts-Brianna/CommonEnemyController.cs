@@ -13,15 +13,25 @@ public class CommonEnemyController : Enemy, IDamageable
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Vector2 boxSize;
-    private bool isGrounded;
+    private bool isGrounded = true;
     private bool isJumping = false;
 
     private Rigidbody2D enemyRB;
     public Animator animator;
 
+	public AudioClip attackAudioClip;
+	public AudioClip hitAudioClip;
+	public AudioClip deathAudioClip;
+	public AudioSource audioSource;
+	
+	public float wait = 3000f;
 	
 	public void Damage()
 	{
+		audioSource.clip = hitAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play(); 
+		
 		Health++;
 
 		if (GameObject.Find("TestPlayer").GetComponent<PlayerMovement>().isStronger == true)
@@ -38,6 +48,10 @@ public class CommonEnemyController : Enemy, IDamageable
 	
 	public void Dead()
 	{
+		audioSource.clip = deathAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth +=10;
 		Destroy(gameObject);
 	}
 	
@@ -54,7 +68,7 @@ public class CommonEnemyController : Enemy, IDamageable
     {
         enemyRB = GetComponent<Rigidbody2D>();
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform; 
         animator = GetComponent<Animator>();
     }
 
@@ -73,13 +87,29 @@ public class CommonEnemyController : Enemy, IDamageable
         {
             animator.SetBool("isAttacking", false);
         }
+		
     }
 
     void JumpAttack()
     {
+		audioSource.clip = attackAudioClip;
+		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
+        audioSource.Play();
+		
+		wait -= 1;
+		
+		if (wait <= 0)
+		{
+		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth -=3;
+		Debug.Log(GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth);
+		wait = 3000f;
+		}
+		
+		
+		
         float distanceFromPlayer = player.position.x - transform.position.x;
 
-        Debug.Log(isGrounded);
+        //Debug.Log(isGrounded);
 
         if (isGrounded)
         {

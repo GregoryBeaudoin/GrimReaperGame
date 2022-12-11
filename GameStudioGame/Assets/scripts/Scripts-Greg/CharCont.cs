@@ -95,6 +95,11 @@ public class CharCont : MonoBehaviour
 
 	void Update()
 	{
+		if (playerHealth <= 0)
+        {
+            animator.SetBool("isDead", true);
+        }
+		
 		if (effectTimer > 0) {
 			effectTimer -= Time.deltaTime;
 			if (statusFire == true)
@@ -162,16 +167,18 @@ public class CharCont : MonoBehaviour
 				knockback();
 				Destroy(collision.gameObject);
 			}
-		}
-		
-		if (playerHealth <= 0)
-        {
-            animator.SetBool("isDead", true);
-            
-        }
-			
-            
+		}	   
     }
+	
+	
+	
+	public void gameOver()
+	{
+		Scene level = SceneManager.GetActiveScene();
+        int currentLevel = level.buildIndex;
+		PlayerPrefs.SetInt("level", currentLevel);
+		SceneManager.LoadScene("GameOver");	
+	}
 
     public void RestartScene()
     {

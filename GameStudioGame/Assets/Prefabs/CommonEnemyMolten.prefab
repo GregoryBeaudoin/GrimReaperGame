@@ -128,12 +128,16 @@ MonoBehaviour:
   lineOfSight: 5
   pounceHeight: 3
   player: {fileID: 0}
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 5388452899062593041}
   groundLayer:
     serializedVersion: 2
     m_Bits: 23
   boxSize: {x: 0, y: 0}
   animator: {fileID: 5388452898242111071}
+  attackAudioClip: {fileID: 8300000, guid: 386b3448f6901cd4186a3ce6166db93f, type: 3}
+  hitAudioClip: {fileID: 8300000, guid: 4bcd9d19a86ec884ea7b8e4d95fc7554, type: 3}
+  deathAudioClip: {fileID: 8300000, guid: e27476f242fa1624083d5458f5531bb3, type: 3}
+  audioSource: {fileID: -8421753605324708027, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
 --- !u!114 &5388452898242111069
 MonoBehaviour:
   m_ObjectHideFlags: 0

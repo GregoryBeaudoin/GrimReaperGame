@@ -18,8 +18,8 @@ public class FinalBossEnemyController : Enemy, IDamageable
 
 			knockback();
 		
-		if (Health > 5){
-			animator.SetBool("isDead", true);
+		if (Health > 30){
+			Destroy(gameObject);
 		}
 	}
 	
@@ -42,18 +42,42 @@ public class FinalBossEnemyController : Enemy, IDamageable
 			
     }
 
-    [SerializeField] public float speed;
+    //[SerializeField] public float speed;
+    private float speed;
+    private float diveSpeed;
     [SerializeField] private Vector3[] positions;
+    [SerializeField] private Vector3[] divePositions;
     private int index;
+    private bool isMoving = false;
 
+    private Transform player;
+    public GameObject bullet;
+    public GameObject bulletParent;
+
+    public float bulletSpeed;
+    public float lineOfSight;
+    public float shootingRange;
+    public float firingRate = 1f;
+    private float fireTime;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        Move();
+        //StartCoroutine(Stages());
+        Dive();
+        Split();
     }
 
     void Move()
     {
+        isMoving = true;
+        speed = 1f;
+
         transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
         
         if (transform.position == positions[index])
@@ -66,6 +90,53 @@ public class FinalBossEnemyController : Enemy, IDamageable
             {
                 index++;
             }
+        }
+    }
+
+
+    void Dive()
+    {
+        isMoving = false;
+        diveSpeed = 2f;
+
+        transform.position = Vector2.MoveTowards(transform.position, divePositions[index], Time.deltaTime * diveSpeed);
+        
+        if (transform.position == divePositions[index])
+        {
+            if (index == divePositions.Length -1)
+            {
+                index = 0;
+            }
+            else
+            {
+                index++;
+            }
+        }
+    }
+
+    void Split()
+    {
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+		if (distanceFromPlayer < lineOfSight && distanceFromPlayer > shootingRange)
+		{
+			transform.position = Vector2.MoveTowards(this.transform.position, player.position, bulletSpeed * Time.deltaTime);
+		}
+		else if (distanceFromPlayer <= shootingRange && fireTime < Time.time)
+		{
+			Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+			fireTime = Time.time + firingRate;
+		}
+    }
+
+    IEnumerator Stages()
+    {
+        Dive();
+        
+        yield return new WaitForSeconds(5);
+
+        for (int i = 0; i < 5; i++)
+        {
+            Move();
         }
     }
 }
