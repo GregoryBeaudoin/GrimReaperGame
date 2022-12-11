@@ -57,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
         {
             runSpeed = 20f;
         }
+        else
+            runSpeed = 40f;
 		
 		if (GameObject.Find("TestPlayer").GetComponent<CharCont>().statusConfusion == true)
         {
