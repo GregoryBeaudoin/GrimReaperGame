@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankEnemyController : Enemy, IDamageable
+public class BossTankEnemyController : Enemy, IDamageable
 {
     public Transform raycast;
     public LayerMask raycastMask;
@@ -28,7 +28,7 @@ public class TankEnemyController : Enemy, IDamageable
 		
         knockback();
 
-		if (Health > 7){
+		if (Health > 10){
 			animator.SetBool("isDead", true);
 		}
 	}
@@ -118,7 +118,7 @@ public class TankEnemyController : Enemy, IDamageable
     {
         animator.SetBool("isWalking", true);
 
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walking-tank"))
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("walking-tankfrost"))
         {
             Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
 

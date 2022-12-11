@@ -28,7 +28,7 @@ public class TankEnemyControllerMolten : Enemy, IDamageable
 		
         knockback();
 
-		if (Health > 3){
+		if (Health > 7){
 			animator.SetBool("isDead", true);
 		}
 	}
