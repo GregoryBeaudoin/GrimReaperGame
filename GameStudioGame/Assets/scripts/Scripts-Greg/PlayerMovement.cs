@@ -159,6 +159,26 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isCasting", false); 
         }
+		
+		if (SceneManager.GetActiveScene().name == "Ice" || SceneManager.GetActiveScene().name == "Ice 1" || SceneManager.GetActiveScene().name == "Ice 2")
+		{
+			isFaster = true;
+			runSpeed = 60f;
+			projectile = firstProjectile;
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Lava" || SceneManager.GetActiveScene().name == "Lava 1")
+		{
+			isDasher = true;
+			dashSpeed = 20f;
+			projectile = secondProjectile;
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Lava 2" || SceneManager.GetActiveScene().name == "FinalBoss")
+		{
+			isExplosive = true;
+			projectile = thirdProjectile;
+		}
     }
 
     private void FixedUpdate()
