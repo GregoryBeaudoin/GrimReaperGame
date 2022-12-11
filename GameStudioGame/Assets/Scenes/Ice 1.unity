@@ -926,7 +926,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312028063
 GameObject:
@@ -4704,7 +4704,7 @@ MonoBehaviour:
   closedRoom: {fileID: 1586528034238900, guid: a9deaafcf082aec43a6017a3dc936bf7, type: 3}
   rooms: []
   waitTime: 2
-  boss: {fileID: 0}
+  boss: {fileID: 324394453}
   powerUp: {fileID: 324394453}
 --- !u!1001 &1537012629
 PrefabInstance:

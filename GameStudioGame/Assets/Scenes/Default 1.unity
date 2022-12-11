@@ -1378,7 +1378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493597352}
   m_LocalRotation: {x: -0, y: 0, z: 0.0023409477, w: -0.99999726}
-  m_LocalPosition: {x: 0.94000006, y: 0.03999996, z: 0}
+  m_LocalPosition: {x: -0.72, y: -0.3, z: 0}
   m_LocalScale: {x: 0.7714636, y: 1.2076402, z: 7.2351513}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5252,6 +5252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 253669580, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 713707063, guid: ec04aeb1b5c036342b2ca9b64f194cd3, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 

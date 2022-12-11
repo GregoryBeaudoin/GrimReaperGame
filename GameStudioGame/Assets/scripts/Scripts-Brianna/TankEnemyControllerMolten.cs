@@ -25,6 +25,8 @@ public class TankEnemyControllerMolten : Enemy, IDamageable
 	public AudioClip deathAudioClip;
 	public AudioSource audioSource;
 	
+	public float wait = 3000f;
+	
     public int Health {get; set; }
     
     public void Damage()
@@ -95,6 +97,8 @@ public class TankEnemyControllerMolten : Enemy, IDamageable
             animator.SetBool("isWalking", true);
             StopAttack();
         }
+		
+		EnemyLogic();
 	}
 
     void OnTriggerEnter2D(Collider2D trig)
@@ -144,6 +148,15 @@ public class TankEnemyControllerMolten : Enemy, IDamageable
 		audioSource.clip = attackAudioClip;
 		audioSource.volume = PlayerPrefs.GetFloat("EffectsVolume", 0.75f);
         audioSource.Play();
+		
+		wait -= 1;
+		
+		if (wait <= 0)
+		{
+		GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth -= 5f;
+		Debug.Log(GameObject.Find ("TestPlayer").GetComponent<CharCont> ().playerHealth);
+		wait = 3000f;
+		}
 		
         timer = intTimer; 
         attackMode = true; 

@@ -4301,7 +4301,7 @@ MonoBehaviour:
   closedRoom: {fileID: 1586528034238900, guid: 7d2f3bfc6bab58b4fab0caf60482a350, type: 3}
   rooms: []
   waitTime: 2
-  boss: {fileID: 0}
+  boss: {fileID: 35445574}
   powerUp: {fileID: 35445574}
 --- !u!1 &1551270537
 GameObject:
