@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 3679923069293676863}
   - component: {fileID: 3679923069293676862}
   - component: {fileID: 3679923069293676857}
-  - component: {fileID: 3679923069293676856}
+  - component: {fileID: 1696411192435337689}
   m_Layer: 6
   m_Name: BossTankEnemyFrost
   m_TagString: Enemy
@@ -254,7 +254,7 @@ MonoBehaviour:
   speed: 2
   raycastDistance: 2
   groundDetection: {fileID: 3679923069363176599}
---- !u!114 &3679923069293676856
+--- !u!114 &1696411192435337689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3679923069293676859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d698147fb6acb4850a8ed9d788d80e1c, type: 3}
+  m_Script: {fileID: 11500000, guid: d7a7124195992438ab8e5e9123d7685e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
