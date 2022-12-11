@@ -42,7 +42,6 @@ public class BossCommonEnemyController : Enemy, IDamageable
 		knockback();
 		
 		if (Health > 10){
-			GameObject.Find("SpeedUpgrade").SetActive(true);
 			animator.SetBool("isDead", true);
 		}
 	}
